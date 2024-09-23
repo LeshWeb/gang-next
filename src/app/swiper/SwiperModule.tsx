@@ -7,9 +7,9 @@ import ThreeImage from '@/app/public/main_image/main-three.png'
 import { ArrowButtonLeft } from '../components/ArrowButtonLeft/ArrowButtonLeft'
 import { ArrowButtonRight } from '../components/ArrowButtonRight/ArrowButtonRight'
 
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
