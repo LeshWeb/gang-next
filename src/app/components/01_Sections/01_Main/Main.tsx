@@ -21,9 +21,14 @@ import 'swiper/css/scrollbar'
 // import required modules
 import { Navigation } from 'swiper/modules'
 
+interface Data {
+  a: number
+  b: string
+}
+
 export function Main() {
-  const swiperRef: any = useRef(null)
-  const sidebar: any = useRef(null)
+  const swiperRef = useRef(null)
+  const sidebar = useRef<HTMLDivElement | null>(null)
   const [slide, setSlide] = useState(1)
   return (
     <>
@@ -90,10 +95,10 @@ export function Main() {
               onClick={() => {
                 swiperRef.current.swiper.slidePrev()
                 if (slide === 2) {
-                  sidebar.current.style.top = '0px'
+                  sidebar.current!.style.top = '0px'
                   setSlide(1)
                 } else if (slide === 3) {
-                  sidebar.current.style.top = '64px'
+                  sidebar.current!.style.top = '64px'
                   setSlide(2)
                 }
               }}
@@ -102,10 +107,10 @@ export function Main() {
               onClick={() => {
                 swiperRef.current.swiper.slideNext()
                 if (slide === 1) {
-                  sidebar.current.style.top = '62px'
+                  sidebar!.current!.style.top = '62px'
                   setSlide(2)
                 } else if (slide === 2) {
-                  sidebar.current.style.top = '124px'
+                  sidebar!.current!.style.top = '124px'
                   setSlide(3)
                 }
               }}
