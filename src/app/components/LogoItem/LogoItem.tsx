@@ -5,7 +5,7 @@ export function LogoItem() {
   return (
     <div className={styles.logo_item}>
       <GangLogo className={styles.logo} />
-      <span className={styles.gang}>GANG</span>
+      <span className={styles.gang}>GAN</span>
     </div>
   )
 }
