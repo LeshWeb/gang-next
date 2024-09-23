@@ -22,8 +22,8 @@ import 'swiper/css/scrollbar'
 import { Navigation } from 'swiper/modules'
 
 export function Main() {
-  const swiperRef = useRef(null)
-  const sidebar = useRef(null)
+  const swiperRef: any = useRef(null)
+  const sidebar: any = useRef(null)
   const [slide, setSlide] = useState(1)
   return (
     <>

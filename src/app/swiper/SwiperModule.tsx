@@ -19,7 +19,7 @@ import 'swiper/css/scrollbar'
 import { Navigation } from 'swiper/modules'
 
 export function SwiperModule() {
-  const swiperRef = useRef(null)
+  const swiperRef: any = useRef(null)
   //   const swiper = useSwiper()
   return (
     <>
