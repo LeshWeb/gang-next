@@ -1,3 +1,3 @@
 export interface IArrowButton {
-  isAccent: boolean
+  onClick: () => void
 }

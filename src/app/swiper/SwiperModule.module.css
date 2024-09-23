@@ -1,0 +1,22 @@
+.view {
+  width: 100vw;
+  height: 100vh;
+  background: #2f2f2f;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.bg_image {
+  z-index: -1;
+  border: 1px solid red;
+}
+
+.mySwiper {
+  border: 1px solid green;
+  max-width: 1200px;
+  max-height: 844px;
+  position: absolute;
+  left: 300px;
+  top: 80px;
+}

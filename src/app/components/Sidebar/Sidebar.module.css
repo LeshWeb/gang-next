@@ -18,9 +18,11 @@
   height: 186px;
   backdrop-filter: blur(20px);
   background: #181c20;
+  position: relative;
 }
 
 .main_loading {
+  position: absolute;
   border-radius: 12px;
   width: 21px;
   height: 62px;

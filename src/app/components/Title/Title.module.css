@@ -1,0 +1,19 @@
+.text_descr {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #686efc;
+  margin: 0;
+}
+
+.text_title {
+  font-family: var(--font-wadik);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 155%;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 60px;
+}
