@@ -4,19 +4,14 @@ import { ArrowButtonRight } from '../../ArrowButtonRight/ArrowButtonRight'
 import { ArrowButtonLeft } from '../../ArrowButtonLeft/ArrowButtonLeft'
 import { Under } from '../../Under/Under'
 import { Sidebar } from '../../Sidebar/Sidebar'
-import Image from 'next/image'
-import FirstImage from '@/app/public/main_image/main-fitst.png'
+import { MainSwiper } from '../../MainSwiper/MainSwiper'
 
 export function Main() {
   return (
     <main className={styles.main}>
-      <Image
-        className={styles.bg_image}
-        src={FirstImage}
-        alt="Main page image"
-        width="1200"
-        height="844"
-      />
+      <div className={styles.bg_image}>
+        <MainSwiper />
+      </div>
       <div className={styles.main_body}>
         <div>
           <div className={styles.main_bollet}>
