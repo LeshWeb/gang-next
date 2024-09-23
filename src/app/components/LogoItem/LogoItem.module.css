@@ -1,0 +1,15 @@
+.logo_item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+}
+.gang {
+  color: #fff;
+  font-size: 24px;
+  font-family: var(--font-wadik);
+}

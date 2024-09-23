@@ -1,0 +1,29 @@
+.menu_title {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer_list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer_list_item {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.links {
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 18px;
+  color: #343d44;
+}
+
+.links:hover {
+  color: #58656e;
+}

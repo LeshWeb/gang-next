@@ -1,0 +1,23 @@
+.footer {
+  padding: calc(1.5% + 10px);
+  display: flex;
+  flex-direction: column;
+  background-color: #151718;
+}
+
+.all_rights {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  color: #343d44;
+}
+
+.footer_up {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_down {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
