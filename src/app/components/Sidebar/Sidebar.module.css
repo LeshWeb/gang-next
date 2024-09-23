@@ -1,0 +1,28 @@
+.main_slidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.slidebar_start,
+.slidebar_end {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+
+.main_case {
+  border: 2px solid #343d44;
+  border-radius: 36px;
+  width: 21px;
+  height: 186px;
+  backdrop-filter: blur(20px);
+  background: #181c20;
+}
+
+.main_loading {
+  border-radius: 12px;
+  width: 21px;
+  height: 62px;
+  background-color: #1826e1;
+}

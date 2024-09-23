@@ -1,0 +1,21 @@
+.arrow_btn_right {
+  fill: #fff;
+  padding: 0;
+  background-color: transparent;
+  background-position: center;
+  border: 2px solid #1826e1;
+  border-radius: 12px;
+  width: 183px;
+  height: 60px;
+  transition: 0.4s;
+}
+
+.arrow_btn_right:hover {
+  background-color: #1826e1;
+}
+
+.arrow_btn_right:active {
+  background-color: #fff;
+  fill: #1826e1;
+  transition: 0.1s;
+}

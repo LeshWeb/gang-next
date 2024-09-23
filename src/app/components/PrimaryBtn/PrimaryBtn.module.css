@@ -1,0 +1,31 @@
+.title {
+  display: inline-block;
+  font-family: var(--font-wadik);
+  font-size: 24px;
+  background-color: #1826e1;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.title:hover {
+  background-color: #686efc;
+  color: #fff;
+  box-shadow: rgba(104, 110, 252, 0.4) 0px 30px 90px;
+}
+
+.big {
+  border-radius: 12px;
+  padding: 30px 71px;
+}
+
+.small {
+  border-radius: 6px;
+  padding: 22px 68px;
+}
+
+.title:active {
+  background-color: #fff;
+  color: #1826e1;
+  box-shadow: none;
+}
