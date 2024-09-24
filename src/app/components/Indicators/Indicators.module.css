@@ -1,0 +1,110 @@
+/* @keyframes drawPath3 {
+  from {
+    stroke-dasharray: 0, 562;
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dasharray: 562, 562;
+    stroke-dashoffset: 0;
+  }
+} */
+
+.stages {
+  display: flex;
+  justify-content: space-evenly;
+}
+.stages_card {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 183px;
+  position: relative;
+}
+
+.stages_circle {
+  /* border: 1px solid pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* .indicate_svg {
+  border: 1px solid orange;
+  z-index: -1;
+  position: absolute;
+  right: -22px;
+  top: -6.4px;
+} */
+
+/* .indicate_svg2 {
+  border: 1px solid orange;
+  z-index: -1;
+  position: absolute;
+  right: -22px;
+  top: -6.4px;
+} */
+
+.indicate_svg3 {
+  /* border: 1px solid orange; */
+  /* z-index: -1;
+  position: absolute;
+  right: -22px;
+  top: -6.4px; */
+}
+
+/* .indicate_svg path */
+
+/* .animate1 path {
+  stroke-dasharray: 300; 
+  stroke-dashoffset: 300; 
+  animation: drawPath 2s ease-in-out forwards; 
+} */
+
+/* .indicate_svg2 path {
+  stroke-dasharray: 421; 
+  stroke-dashoffset: 421; 
+  animation: drawPath2 2s ease-in-out forwards; 
+} */
+
+/* .indicate_svg3 path {
+  stroke-dasharray: 562;
+  stroke-dashoffset: 562;
+  animation: drawPath3 2s ease-in-out forwards;
+} */
+
+.circle_svg {
+  /* border: 1px solid orange; */
+  width: 183px;
+  height: 183px;
+  z-index: -2;
+  position: absolute;
+}
+
+.circle_text {
+  /* border: 1px solid white; */
+  font-family: var(--font-wadik);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 155%;
+  letter-spacing: 0.05em;
+  color: #686efc;
+}
+
+.circle_desc {
+  /* border: 1px solid green; */
+  max-width: 140px;
+  display: flex;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+}
+
+.opacity {
+  opacity: 0;
+  transition: 0.4s;
+}
