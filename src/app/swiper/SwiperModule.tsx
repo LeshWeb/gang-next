@@ -9,7 +9,7 @@ import { ArrowButtonRight } from '../components/ArrowButtonRight/ArrowButtonRigh
 
 import React, { useRef } from 'react'
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -19,7 +19,7 @@ import 'swiper/css/scrollbar'
 import { Navigation } from 'swiper/modules'
 
 export function SwiperModule() {
-  const swiperRef: any = useRef(null)
+  const swiperRef = useRef<SwiperRef | null>(null)
   //   const swiper = useSwiper()
   return (
     <>
@@ -57,10 +57,8 @@ export function SwiperModule() {
             height="844"
           />
         </SwiperSlide>
-        <ArrowButtonLeft onClick={() => swiperRef.current.swiper.slidePrev()} />
-        <ArrowButtonRight
-          onClick={() => swiperRef.current.swiper.slideNext()}
-        />
+        <ArrowButtonLeft onClick={() => console.log('hello')} />
+        <ArrowButtonRight onClick={() => console.log('hello')} />
       </Swiper>
       {/* </div> */}
     </>

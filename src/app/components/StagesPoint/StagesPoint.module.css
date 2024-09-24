@@ -76,6 +76,8 @@
   top: -6.4px;
 }
 
+/* .indicate_svg path */
+
 .indicate_svg path {
   stroke-dasharray: 300; /* Длина пути (настраивается) */
   stroke-dashoffset: 300; /* Начальное смещение */

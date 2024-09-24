@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './StagesPoint.module.css'
 import Circle from '@/app/public/svgs/circle.svg'
 import Indicate1 from '@/app/public/svgs/indicaters/indicate1.svg'
@@ -5,13 +7,24 @@ import Indicate2 from '@/app/public/svgs/indicaters/indicate2.svg'
 import Indicate3 from '@/app/public/svgs/indicaters/indicate3.svg'
 import ArrowLeft from '@/app/public/svgs/indicaters/arrow-left.svg'
 import ArrowRight from '@/app/public/svgs/indicaters/arrow-right.svg'
+import clsx from 'clsx'
+
+import { useInView } from 'react-intersection-observer'
 
 export function StagesPoint() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    rootMargin: '200px 0px',
+  })
+
   return (
     <div className={styles.stages}>
       <div className={styles.stages_card}>
         <div className={styles.stages_circle}>
-          <Indicate1 className={styles.indicate_svg} />
+          <Indicate1
+            className={clsx(styles.indicate_svg, { [styles.animate]: inView })}
+            ref={ref}
+          />
           <Circle className={styles.circle_svg} />
           <p className={styles.circle_text}>01</p>
         </div>
