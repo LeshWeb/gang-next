@@ -1,0 +1,25 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  border: 1px solid #1826e1;
+  border-radius: 12px;
+  height: 58px;
+  padding: 0 48px;
+  max-width: max-content;
+}
+
+.title:hover {
+  background-color: #1826e1;
+  color: #fff;
+}
+
+.title:active {
+  background-color: #fff;
+  color: #1826e1;
+}

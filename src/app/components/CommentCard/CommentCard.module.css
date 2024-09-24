@@ -1,0 +1,49 @@
+.feedback_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+  border: 1px solid #3f4950;
+  border-radius: 12px;
+  width: 387px;
+  height: 30vh;
+  background: linear-gradient(180deg, #343d44 0%, #293035 100%);
+  margin-bottom: 100px;
+}
+
+.feedback_text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 155%;
+  letter-spacing: -0.01em;
+  color: #b5c1c9;
+}
+.feedback_usercard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feedback_image {
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.feedback_name {
+  margin-bottom: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #fff;
+}
+
+.feedback_date {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #3f4950;
+}

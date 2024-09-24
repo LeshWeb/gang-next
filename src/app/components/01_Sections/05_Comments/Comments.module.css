@@ -1,0 +1,15 @@
+.feedback_cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.image {
+  height: 90px;
+  width: 90px;
+}
+
+.feedback_cta {
+  display: flex;
+  justify-content: space-between;
+}

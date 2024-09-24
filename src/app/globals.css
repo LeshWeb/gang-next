@@ -42,6 +42,7 @@ a {
 
 .cards,
 .stages,
-.devices {
+.devices,
+.feedback {
   margin-bottom: 200px;
 }

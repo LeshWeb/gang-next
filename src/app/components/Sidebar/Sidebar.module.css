@@ -1,6 +1,13 @@
 .main_slidebar {
   display: flex;
+}
+
+.main_slidebar_vertical {
   flex-direction: column;
+}
+.main_slidebar_horizontal {
+  align-items: center;
+  gap: 20px;
 }
 
 .slidebar_start,
@@ -14,17 +21,31 @@
 .main_case {
   border: 2px solid #343d44;
   border-radius: 36px;
-  width: 21px;
-  height: 186px;
   backdrop-filter: blur(20px);
   background: #181c20;
   position: relative;
 }
+.main_case_vertical {
+  width: 21px;
+  height: 186px;
+}
 
+.main_case_horizontal {
+  height: 21px;
+  width: 186px;
+}
 .main_loading {
   position: absolute;
   border-radius: 12px;
+  background-color: #1826e1;
+}
+
+.main_loading_vertical {
   width: 21px;
   height: 62px;
-  background-color: #1826e1;
+}
+
+.main_loading_horizontal {
+  width: 62px;
+  height: 21px;
 }

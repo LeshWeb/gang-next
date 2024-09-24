@@ -1,3 +1,3 @@
 export interface IArrowButton {
-  onClick: () => void
+  onClick?: () => void
 }
