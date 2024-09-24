@@ -2,6 +2,7 @@ import { LogoItem } from '../LogoItem/LogoItem'
 import Link from 'next/link'
 import styles from './Header.module.css'
 import { Basket } from '../Basket/Basket'
+import { Burger } from '../Burger/Burger'
 
 export function Header() {
   return (
@@ -32,7 +33,10 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        <Basket />
+        <div className={styles.header_icons}>
+          <Basket />
+          <Burger />
+        </div>
       </div>
     </header>
   )
