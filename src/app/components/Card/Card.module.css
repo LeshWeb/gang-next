@@ -1,0 +1,95 @@
+.card_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #343d44 0%, #293035 100%);
+  border: 3px solid #3f4950;
+  border-radius: 12px;
+  width: 100%;
+  min-height: 450px;
+  margin-bottom: 40px;
+}
+
+.card_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  min-width: 390px;
+  height: 100%;
+  /* border: 1px red solid; */
+}
+
+.card_description {
+  flex-basis: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  /* border: 1px red solid; */
+}
+
+.desc_title {
+  margin: 30px 0 0 0;
+  font-family: var(--font-wadik);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.55;
+  color: #686efc;
+  margin-bottom: 20px;
+}
+
+.card_statistics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+.key_of_card {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 18px;
+  /* line-height: 1.55; */
+  letter-spacing: -0.01em;
+  color: #b5c1c9;
+  /* border: 1px solid green; */
+}
+
+.statistics_of_card {
+  /* border: 1px solid yellow; */
+  margin-bottom: 40px;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 18px;
+  /* line-height: 1.55; */
+  letter-spacing: -0.01em;
+  text-align: right;
+  color: #e0e1fe;
+}
+
+.card_down {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.card_price {
+  /* border: 1px solid blue; */
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+.card_price_bold {
+  margin-right: 10px;
+  display: inline;
+  font-family: var(--font-wadik);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 155%;
+  color: #fff;
+}
+.card_price_descr {
+  display: inline;
+}

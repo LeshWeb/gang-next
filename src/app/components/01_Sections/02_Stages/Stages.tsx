@@ -4,7 +4,7 @@ import styles from './Stages.module.css'
 
 export function Stages() {
   return (
-    <section className={styles.stages}>
+    <section className="stages">
       <Title title="Аренда без залога" description="все, что нужно - паспорт" />
       <StagesPoint />
     </section>

@@ -39,3 +39,8 @@ a {
 ::-webkit-scrollbar {
   width: 0;
 }
+
+.cards,
+.stages {
+  margin-bottom: 200px;
+}
