@@ -9,7 +9,12 @@ import clsx from 'clsx'
 
 export function SocialMediaIcons({ size }: FooterProps) {
   return (
-    <div className={styles.social__media_footer}>
+    <div
+      className={clsx(styles.social__media_footer, {
+        [styles.small_gap]: size === 'small',
+        [styles.big_gap]: size === 'big',
+      })}
+    >
       <YouTubeIcon
         className={clsx(styles.icon, {
           [styles.small]: size === 'small',

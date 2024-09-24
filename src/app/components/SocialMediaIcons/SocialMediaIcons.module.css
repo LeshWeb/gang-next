@@ -1,5 +1,12 @@
 .social__media_footer {
   display: flex;
+}
+
+.big_gap {
+  column-gap: 20px;
+}
+
+.small_gap {
   column-gap: 4px;
 }
 
