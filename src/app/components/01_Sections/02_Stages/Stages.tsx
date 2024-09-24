@@ -1,6 +1,5 @@
 import { Title } from '@/app/components/Title/Title'
 import { StagesPoint } from '../../StagesPoint/StagesPoint'
-import styles from './Stages.module.css'
 
 export function Stages() {
   return (
