@@ -14,16 +14,19 @@ import { useInView } from 'react-intersection-observer'
 export function StagesPoint() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    rootMargin: '200px 0px',
+    rootMargin: '-200px 0px',
+    delay: 5,
   })
 
   return (
     <div className={styles.stages}>
       <div className={styles.stages_card}>
-        <div className={styles.stages_circle}>
+        <div className={styles.stages_circle} ref={ref}>
           <Indicate1
-            className={clsx(styles.indicate_svg, { [styles.animate]: inView })}
-            ref={ref}
+            className={clsx(styles.indicate_svg, {
+              [styles.opacity]: inView === false,
+              [styles.animate1]: inView === true,
+            })}
           />
           <Circle className={styles.circle_svg} />
           <p className={styles.circle_text}>01</p>

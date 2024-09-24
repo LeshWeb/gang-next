@@ -78,7 +78,7 @@
 
 /* .indicate_svg path */
 
-.indicate_svg path {
+.animate1 path {
   stroke-dasharray: 300; /* Длина пути (настраивается) */
   stroke-dashoffset: 300; /* Начальное смещение */
   animation: drawPath 2s ease-in-out forwards; /* Анимация */
@@ -128,4 +128,9 @@
 
 .arrow_right {
   align-self: center;
+}
+
+.opacity {
+  opacity: 0;
+  transition: 0.4s;
 }
