@@ -10,8 +10,14 @@
   column-gap: 4px;
 }
 
-.icon:hover {
-  fill: var(--second-primary-color);
+@media (hover: hover) {
+  .icon:hover {
+    fill: var(--second-primary-color);
+  }
+}
+
+.icon:active {
+  fill: #fff;
 }
 
 .big {

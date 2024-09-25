@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  background-color: var(--bg-color);
-  z-index: 1;
+  background: var(--bg-color);
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,7 +62,7 @@
 }
 @media screen and (max-width: 600px) {
   .header {
-    transition: none;
+    background-color: var(--bg-color);
   }
   .link {
     display: none;
