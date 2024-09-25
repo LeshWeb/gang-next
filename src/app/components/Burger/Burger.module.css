@@ -9,8 +9,9 @@
 .burger_line1,
 .burger_line2,
 .burger_line3 {
+  border-radius: 10px;
   background-color: #b5c1c9;
-  height: 2px;
+  height: 3px;
   width: 35px;
 }
 

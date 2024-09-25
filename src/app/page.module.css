@@ -1,4 +1,11 @@
 .container {
-  max-width: 97%;
-  margin: 0 1.5%;
+  max-width: 97vw;
+  margin: 0 1.5vw;
+  /* border: 1px solid green; */
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    overflow-x: hidden;
+  }
 }

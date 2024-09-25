@@ -1,5 +1,5 @@
 import styles from '../page.module.css'
-// import { Main } from '@/app/components/01_Sections/01_Main/Main'
+import { Main } from '@/app/components/01_Sections/01_Main/Main'
 // import { Stages } from '@/app/components/01_Sections/02_Stages/Stages'
 // import { Cards } from '@/app/components/01_Sections/03_Cards/Cards'
 // import { Devices } from '@/app/components/01_Sections/04_Devices/Devices'
@@ -9,7 +9,7 @@ import styles from '../page.module.css'
 export default function Page() {
   return (
     <div className={styles.container}>
-      {/* <Main /> */}
+      <Main />
       {/* <Stages />
       <Cards />
       <Devices />

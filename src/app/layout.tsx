@@ -18,6 +18,10 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <link rel="icon" href="/public/svgs/icon.svg" sizes="any" />
+        <meta
+          name="viewport"
+          content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
+        />
       </body>
       <body>
         <Header />

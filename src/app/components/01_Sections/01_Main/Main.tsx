@@ -62,7 +62,7 @@ export function Main() {
           </Swiper>
         </div>
         <div className={styles.main_body}>
-          <div>
+          <div className={styles.boolet_button}>
             <div className={styles.main_bollet}>
               <p className={styles.main_desc}>
                 Лучшие решения для командной игры
@@ -86,30 +86,6 @@ export function Main() {
         <div className={styles.main_down}>
           <Under />
           <div>
-            {/* <ArrowButtonLeft
-              onClick={() => {
-                swiperRef.current.swiper.slidePrev()
-                if (slide === 2) {
-                  sidebar.current.style.top = '0px'
-                  setSlide(1)
-                } else if (slide === 3) {
-                  sidebar.current.style.top = '64px'
-                  setSlide(2)
-                }
-              }}
-            />
-            <ArrowButtonRight
-              onClick={() => {
-                swiperRef.current.swiper.slideNext()
-                if (slide === 1) {
-                  sidebar.current.style.top = '62px'
-                  setSlide(2)
-                } else if (slide === 2) {
-                  sidebar.current.style.top = '124px'
-                  setSlide(3)
-                }
-              }}
-            /> */}
             <ArrowButtonLeft
               onClick={() => {
                 if (swiperRef.current) {

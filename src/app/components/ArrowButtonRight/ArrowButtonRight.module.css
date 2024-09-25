@@ -10,6 +10,12 @@
   transition: 0.4s;
 }
 
+@media screen and (max-width: 600px) {
+  .arrow_btn_right {
+    display: none;
+  }
+}
+
 .arrow_btn_right:hover {
   background-color: #1826e1;
 }

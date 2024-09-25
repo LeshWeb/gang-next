@@ -6,14 +6,14 @@ import clsx from 'clsx'
 export function PrimaryBtn({ title, size, href }: PrimaryBtnProps) {
   return (
     <Link href={href}>
-      <span
+      <div
         className={clsx(styles.title, {
           [styles.small]: size === 'small',
           [styles.big]: size === 'big',
         })}
       >
         {title}
-      </span>
+      </div>
     </Link>
   )
 }

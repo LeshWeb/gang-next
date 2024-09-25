@@ -11,6 +11,11 @@
   margin-right: 20px;
 }
 
+@media screen and (max-width: 600px) {
+  .arrow_btn_left {
+    display: none;
+  }
+}
 .arrow_btn_left:hover {
   background-color: #343d44;
 }
