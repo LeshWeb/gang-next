@@ -4,7 +4,7 @@ import styles from './FooterMenuItem.module.css'
 
 export function FooterMenuItem(data: IFooterMenu) {
   return (
-    <div>
+    <div className={styles.footer_menu_items}>
       <h4 className={styles.menu_title}>{data.title}</h4>
       <ul className={styles.footer_list}>
         {data.links.map((link: IFooterMenuLinks) => {
