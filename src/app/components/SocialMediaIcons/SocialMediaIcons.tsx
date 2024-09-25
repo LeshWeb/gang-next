@@ -4,7 +4,7 @@ import TwichIcon from '@/app/public/svgs/socialmedia/twich.svg'
 import WhatsUpIcon from '@/app/public/svgs/socialmedia/whatsup.svg'
 import YouTubeIcon from '@/app/public/svgs/socialmedia/youtube.svg'
 import styles from './SocialMediaIcons.module.css'
-import { FooterProps } from '@/app/components/Footer/Footer.types'
+import { FooterProps } from './SocialMediaIcons.types'
 import clsx from 'clsx'
 
 export function SocialMediaIcons({ size }: FooterProps) {

@@ -1,11 +1,14 @@
 .container {
-  max-width: 97vw;
-  margin: 0 1.5vw;
-  /* border: 1px solid green; */
+  max-width: 96vw;
+  margin: 0 2vw;
+  max-width: 100vw;
 }
-
 @media screen and (max-width: 600px) {
-  .container {
+  .body {
     overflow-x: hidden;
+    position: fixed;
   }
+}
+@viewport {
+  user-zoom: fixed;
 }

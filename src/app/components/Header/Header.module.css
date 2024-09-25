@@ -8,14 +8,14 @@
   width: 100vw;
   border-bottom: 2px #343d44 solid;
   transition: 0.3s;
-  padding-inline: 1.5vw;
+  padding-inline: 2vw;
   padding-block: 10px;
 }
 .header_items {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 97vw;
+  max-width: 96vw;
   flex-grow: 1;
 }
 @media (hover: hover) {

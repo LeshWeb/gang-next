@@ -29,7 +29,7 @@ export function Main() {
     <>
       <main className={styles.main}>
         <div className={styles.view}>
-          <Swiper
+          {/* <Swiper
             className={styles.mySwiper}
             modules={[Navigation]}
             navigation
@@ -59,7 +59,7 @@ export function Main() {
                 height="844"
               />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
         </div>
         <div className={styles.main_body}>
           <div className={styles.boolet_button}>
