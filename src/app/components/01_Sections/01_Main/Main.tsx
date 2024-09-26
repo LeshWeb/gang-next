@@ -1,6 +1,7 @@
 'use client'
 import { PrimaryBtn } from '../../PrimaryBtn/PrimaryBtn'
 import styles from './Main.module.css'
+import swiper from './Swiper.module.css'
 import { ArrowButtonRight } from '../../ArrowButtonRight/ArrowButtonRight'
 import { ArrowButtonLeft } from '../../ArrowButtonLeft/ArrowButtonLeft'
 import { Under } from '../../Under/Under'
@@ -28,38 +29,35 @@ export function Main() {
   return (
     <main className="main">
       <div className={styles.main}>
-        <div className={styles.swiper_view}>
+        <div className={swiper.swiper_view}>
           <Swiper
-            className={styles.swiper}
+            className={swiper.swiper}
             modules={[Navigation]}
             navigation
             ref={swiperRef}
           >
             <SwiperSlide>
               <Image
-                className={styles.swiper_image}
+                className={swiper.swiper_image}
                 src={FirstImage}
                 alt="Main first page image"
-                width="1200"
-                height="844"
+                fill={true}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                className={styles.swiper_image}
+                className={swiper.swiper_image}
                 src={SecondImage}
                 alt="Main first page image"
-                width="1200"
-                height="844"
+                fill={true}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                className={styles.swiper_image}
+                className={swiper.swiper_image}
                 src={ThreeImage}
                 alt="Main first page image"
-                width="1200"
-                height="844"
+                fill={true}
               />
             </SwiperSlide>
           </Swiper>
