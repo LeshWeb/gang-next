@@ -1,78 +1,164 @@
 .main__under {
-  display: flex;
-  align-items: center;
   background-color: rgba(104, 110, 252, 0.16);
   border: 1px solid rgba(181, 193, 201, 0.08);
   border-radius: 12px;
-  padding: 0 71px;
-  height: 60px;
-  gap: 40px;
-  max-width: max-content;
+  min-height: 60px;
+  max-height: 130px;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 'a b c d';
+  position: relative;
+}
+.under__text {
+  margin-block: 10px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #b5c1c9;
+}
+.text_1 {
+  border-right: 1px solid #b5c1c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-area: a;
+}
+.text_2 {
+  border-right: 1px solid #b5c1c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-area: b;
+}
+.text_3 {
+  border-right: 1px solid #b5c1c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-area: c;
+}
+.text_4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-area: d;
 }
 
-@media screen and (max-width: 600px) {
-  .main__under {
-    z-index: 2;
-    position: absolute;
-    top: 60vh;
-    max-width: 86vw;
-    flex-wrap: wrap;
-    padding-inline: 20px;
-    padding-block: 20px;
-    height: max-content;
-    row-gap: 30px;
-    column-gap: 10px;
+@media screen and (max-width: 1400px) {
+  .under__text {
+    font-size: 18px;
   }
+  .main__under {
+    width: 65vw;
+  }
+}
 
-  .main__under::after {
+@media screen and (max-width: 1300px) {
+  .under__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main__under {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'a b' 'c d';
+    row-gap: 20px;
+    padding-block: 15px;
+    padding-inline: 30px;
+  }
+  .main__under:after {
     content: '';
     position: absolute;
-    height: 2px;
-    min-width: 333px;
+    width: 3px;
+    height: calc(100% - 30px);
+    transform-origin: center;
+    left: 50%;
+    top: 15px;
     background-color: rgba(181, 193, 201, 0.08);
+    border-radius: 10px;
   }
   .main__under::before {
     content: '';
     position: absolute;
-    left: 52%;
-    height: 64px;
-    min-width: 2px;
+    height: 3px;
+    width: calc(100% - 60px);
+    transform-origin: center;
+    top: 50%;
+    left: 30px;
     background-color: rgba(181, 193, 201, 0.08);
+    border-radius: 10px;
   }
-}
-
-.under__item:not(:last-child) {
-  border-right: 2px solid #30354e;
-  padding-right: 40px;
-}
-
-@media screen and (max-width: 600px) {
-  .under__item:not(:last-child) {
+  .under__text {
+    font-size: 18px;
+  }
+  .text_1 {
     border-right: none;
-    padding-right: 0px;
+    justify-content: flex-start;
   }
-  .under__item:nth-child(2n) p {
+  .text_2 {
+    border-right: none;
+    justify-content: flex-end;
+  }
+  .text_3 {
+    border-right: none;
+    justify-content: flex-start;
+  }
+  .text_4 {
+    border-right: none;
     justify-content: flex-end;
   }
 }
 
-.under__text {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding: 10px 0 10px 0;
-  margin: 0;
-  font-family: var(--font-inter);
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  color: #b5c1c9;
+@media screen and (max-width: 840px) {
+  .under__text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main__under {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 470px) {
   .under__text {
-    width: 160px;
+    font-size: 16px;
+  }
+  .main__under {
+    padding-block: 10px;
+    padding-inline: 10px;
+  }
+  .main__under:after {
+    width: 2px;
+    height: calc(100% - 20px);
+    left: 50%;
+    top: 10px;
+  }
+  .main__under::before {
+    height: 2px;
+    width: calc(100% - 20px);
+    top: 50%;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .under__text {
     font-size: 14px;
-    padding: 0px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .under__text {
+    font-size: 14px;
   }
 }

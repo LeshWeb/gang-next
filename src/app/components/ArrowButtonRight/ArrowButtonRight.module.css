@@ -10,7 +10,7 @@
   transition: 0.4s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .arrow_btn_right {
     display: none;
   }

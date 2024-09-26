@@ -11,6 +11,8 @@
 .big {
   border-radius: 12px;
   padding: 30px 40px;
+  position: relative;
+  z-index: 4;
 }
 
 @media screen and (max-width: 600px) {
