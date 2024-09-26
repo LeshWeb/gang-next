@@ -162,3 +162,9 @@
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .under__text {
+    font-size: 12px;
+  }
+}
