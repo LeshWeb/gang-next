@@ -13,13 +13,20 @@
   /* border: 1px solid orange; */
   z-index: -1;
   position: absolute;
-  right: -22px;
-  top: -6.4px;
+  transform-origin: top right;
+  top: -0.7px;
+  right: -0.7px;
 }
 
 .animate path {
   stroke-dasharray: 562;
   stroke-dashoffset: 562;
   animation: drawPath 2s ease-in-out forwards;
-  animation-delay: 1.8s;
+  animation-delay: 0.9s;
+}
+
+@media screen and (max-width: 600px) {
+  .animate path {
+    animation-delay: 0s;
+  }
 }

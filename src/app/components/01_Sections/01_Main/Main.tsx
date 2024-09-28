@@ -27,7 +27,7 @@ export function Main() {
   const sidebar = useRef<HTMLDivElement | null>(null)
   const [slide, setSlide] = useState<number>(1)
   return (
-    <main className="main">
+    <main className="section">
       <div className={styles.main}>
         <div className={swiper.swiper_view}>
           <Swiper

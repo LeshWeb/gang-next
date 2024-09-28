@@ -4,7 +4,7 @@ import styles from './Contacts.module.css'
 
 export function Contacts() {
   return (
-    <section className="contacts">
+    <section className="section">
       <div className={styles.contacts_container}>
         <Title description={'Свяжись для заказа'} title={'Наши контакты'} />
         <div className={styles.social_media}>

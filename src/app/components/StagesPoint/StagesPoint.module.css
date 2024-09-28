@@ -6,3 +6,48 @@
 .arrow_right {
   align-self: center;
 }
+
+@media screen and (max-width: 1200px) {
+  .arrow_left,
+  .arrow_right {
+    transform: scale(0.8);
+  }
+  .arrow_right {
+    margin-bottom: 20px;
+  }
+  .arrow_left {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .arrow_left,
+  .arrow_right {
+    transform: scale(0.7);
+  }
+  .arrow_right {
+    margin-bottom: 30px;
+  }
+  .arrow_left {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .arrow_left,
+  .arrow_right {
+    display: none;
+  }
+  .stages {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 600px) {
+  .stages {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .stages {
+    row-gap: 20px;
+    align-items: center;
+  }
+}

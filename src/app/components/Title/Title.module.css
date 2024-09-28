@@ -16,4 +16,52 @@
   color: #fff;
   margin: 0;
   margin-bottom: 60px;
+  hyphens: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .text_descr {
+    font-size: 28px;
+  }
+  .text_title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .text_descr {
+    font-size: 24px;
+  }
+  .text_title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .text_descr {
+    font-size: 20px;
+  }
+  .text_title {
+    font-size: 28px;
+  }
+  .text_title {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .text_descr {
+    font-size: 20px;
+  }
+  .text_title {
+    font-size: 24px;
+  }
+  .text_title {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .text_descr {
+    font-size: 16px;
+  }
+  .text_title {
+    font-size: 18px;
+  }
 }

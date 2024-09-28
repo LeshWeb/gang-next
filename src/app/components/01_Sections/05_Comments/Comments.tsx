@@ -12,7 +12,7 @@ import { Sidebar } from '../../Sidebar/Sidebar'
 
 export function Comments() {
   return (
-    <section className="feedback">
+    <section className="section">
       <Title title="Доволен сервисом?" description="ОСТАВЬ ОТЗЫВ" />
       <div className={styles.feedback_cards}>
         <CommentCard

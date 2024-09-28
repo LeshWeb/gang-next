@@ -10,7 +10,7 @@ export function StagesPoint() {
   return (
     <div className={styles.stages}>
       <IndicatorFirst />
-      <ArrowLeft />
+      <ArrowLeft className={styles.arrow_left} />
       <IndicatorSecond />
       <ArrowRight className={styles.arrow_right} />
       <IndicatorThree />

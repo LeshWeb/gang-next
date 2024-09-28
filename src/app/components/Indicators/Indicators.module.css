@@ -1,78 +1,19 @@
-/* @keyframes drawPath3 {
-  from {
-    stroke-dasharray: 0, 562;
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dasharray: 562, 562;
-    stroke-dashoffset: 0;
-  }
-} */
-
-.stages {
-  display: flex;
-  justify-content: space-evenly;
-}
 .stages_card {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 183px;
   position: relative;
+  z-index: -3;
 }
-
 .stages_circle {
-  /* border: 1px solid pink; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  width: 183px;
+  height: 183px;
 }
-
-/* .indicate_svg {
-  border: 1px solid orange;
-  z-index: -1;
-  position: absolute;
-  right: -22px;
-  top: -6.4px;
-} */
-
-/* .indicate_svg2 {
-  border: 1px solid orange;
-  z-index: -1;
-  position: absolute;
-  right: -22px;
-  top: -6.4px;
-} */
-
-.indicate_svg3 {
-  /* border: 1px solid orange; */
-  /* z-index: -1;
-  position: absolute;
-  right: -22px;
-  top: -6.4px; */
-}
-
-/* .indicate_svg path */
-
-/* .animate1 path {
-  stroke-dasharray: 300; 
-  stroke-dashoffset: 300; 
-  animation: drawPath 2s ease-in-out forwards; 
-} */
-
-/* .indicate_svg2 path {
-  stroke-dasharray: 421; 
-  stroke-dashoffset: 421; 
-  animation: drawPath2 2s ease-in-out forwards; 
-} */
-
-/* .indicate_svg3 path {
-  stroke-dasharray: 562;
-  stroke-dashoffset: 562;
-  animation: drawPath3 2s ease-in-out forwards;
-} */
 
 .circle_svg {
   /* border: 1px solid orange; */
@@ -93,7 +34,7 @@
 }
 
 .circle_desc {
-  /* border: 1px solid green; */
+  /* border: 1px solid blue; */
   max-width: 140px;
   display: flex;
   font-family: var(--font-inter);
@@ -107,4 +48,24 @@
 .opacity {
   opacity: 0;
   transition: 0.4s;
+}
+
+@media screen and (max-width: 1200px) {
+  .stages_circle {
+    transform: scale(0.8);
+  }
+  .stages_circle {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .stages_circle {
+    transform: scale(0.7);
+  }
+  .stages_circle {
+    margin-bottom: 10px;
+  }
+  .circle_desc {
+    margin: 5px;
+  }
 }

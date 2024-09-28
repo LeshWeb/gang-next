@@ -8,7 +8,7 @@ import GreenPC from '@/app/public/PC/greenPC.png'
 
 export function Cards() {
   return (
-    <section className="cards">
+    <section className="section">
       <Title description={'Cо своей сборкой'} title={'Выбирай и выигрывай'} />
       <Card data={white} title="Стандартный" price={300} href={'#'}>
         <Image src={WhitePC} alt="White PC" />

@@ -13,20 +13,18 @@ export function IndicatorFirst() {
   })
 
   return (
-    <div className={styles.stages}>
-      <div className={styles.stages_card}>
-        <div className={styles.stages_circle} ref={ref}>
-          <Indicate
-            className={clsx(indicators.position, {
-              [styles.opacity]: inView === false,
-              [indicators.animate]: inView === true,
-            })}
-          />
-          <Circle className={styles.circle_svg} />
-          <p className={styles.circle_text}>01</p>
-        </div>
-        <p className={styles.circle_desc}>Отправь паспортные данные</p>
+    <div className={styles.stages_card}>
+      <div className={styles.stages_circle} ref={ref}>
+        <Indicate
+          className={clsx(indicators.position, {
+            [styles.opacity]: inView === false,
+            [indicators.animate]: inView === true,
+          })}
+        />
+        <Circle className={styles.circle_svg} />
+        <p className={styles.circle_text}>01</p>
       </div>
+      <p className={styles.circle_desc}>Отправь паспортные данные</p>
     </div>
   )
 }
