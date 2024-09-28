@@ -1,6 +1,5 @@
 .title {
   font-family: var(--font-wadik);
-  font-size: 24px;
   background-color: #1826e1;
   color: #fff;
   transition: 0.3s;
@@ -9,6 +8,7 @@
 }
 
 .big {
+  font-size: 24px;
   border-radius: 12px;
   padding: 30px 40px;
   position: relative;
@@ -28,6 +28,7 @@
 }
 
 .small {
+  font-size: 24px;
   border-radius: 6px;
   padding: 20px 60px;
 }
@@ -43,5 +44,12 @@
     background-color: #686efc;
     color: #fff;
     box-shadow: rgba(104, 110, 252, 0.4) 0px 30px 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .small {
+    border-radius: 6px;
+    padding: 15px 30px;
   }
 }

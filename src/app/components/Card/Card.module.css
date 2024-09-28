@@ -1,95 +1,176 @@
 .card_item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: linear-gradient(180deg, #343d44 0%, #293035 100%);
   border: 3px solid #3f4950;
   border-radius: 12px;
-  width: 100%;
-  min-height: 450px;
   margin-bottom: 40px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 'i t' 'i s' 'i p';
+  row-gap: 40px;
+  column-gap: 40px;
+  padding: 60px;
 }
 
 .card_image {
+  max-width: max-content;
+  max-height: max-content;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 100px;
-  min-width: 390px;
-  height: 100%;
-  /* border: 1px red solid; */
-}
-
-.card_description {
-  flex-basis: 60%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-right: 100px;
-  /* border: 1px red solid; */
+  align-self: center;
+  justify-self: start;
+  grid-area: i;
+  /* border: 1px solid red; */
 }
 
 .desc_title {
-  margin: 30px 0 0 0;
+  margin: 0px;
+  grid-area: t;
   font-family: var(--font-wadik);
   font-weight: 700;
   font-size: 48px;
-  line-height: 1.55;
   color: #686efc;
-  margin-bottom: 20px;
 }
 
 .card_statistics {
+  grid-area: s;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-  /* border: 1px solid red; */
 }
 
 .key_of_card {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: 18px;
-  /* line-height: 1.55; */
   letter-spacing: -0.01em;
   color: #b5c1c9;
-  /* border: 1px solid green; */
 }
-
 .statistics_of_card {
-  /* border: 1px solid yellow; */
-  margin-bottom: 40px;
+  text-align: right;
   font-family: var(--font-inter);
   font-weight: 500;
   font-size: 18px;
-  /* line-height: 1.55; */
   letter-spacing: -0.01em;
-  text-align: right;
   color: #e0e1fe;
 }
-
 .card_down {
-  align-items: center;
+  grid-area: p;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
 }
 .card_price {
-  /* border: 1px solid blue; */
+  display: flex;
+  align-items: flex-end;
+}
+.card_price_bold {
+  font-family: var(--font-wadik);
+  font-weight: 700;
+  font-size: 48px;
+  color: #fff;
+  margin: 0 12px 0 0;
+  padding: 0;
+}
+.card_price_descr {
   font-family: var(--font-inter);
   font-weight: 500;
   font-size: 24px;
   color: #fff;
+  margin: 0;
+  padding: 0 0 5px 0;
 }
-.card_price_bold {
-  margin-right: 10px;
-  display: inline;
-  font-family: var(--font-wadik);
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 155%;
-  color: #fff;
+
+@media screen and (max-width: 1200px) {
+  .card_item {
+    padding: 40px;
+  }
+  .desc_title {
+    font-size: 36px;
+  }
+  .card_price_bold {
+    font-size: 36px;
+  }
+  .card_price_descr {
+    font-size: 20px;
+    padding: 0 0 3px 0;
+  }
 }
-.card_price_descr {
-  display: inline;
+
+@media screen and (max-width: 1000px) {
+  .card_item {
+    padding: 30px;
+  }
+  .card_item {
+    grid-template-columns: auto 4fr;
+  }
+  .statistics_of_card,
+  .key_of_card {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card_item {
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'i' 't' 's' 'p';
+    row-gap: 20px;
+  }
+  .desc_title {
+    text-align: center;
+  }
+  .card_image {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .desc_title {
+    font-size: 32px;
+  }
+  .statistics_of_card,
+  .key_of_card {
+    font-size: 14px;
+  }
+  .card_item {
+    padding: 20px;
+  }
+  .card_price_bold {
+    font-size: 24px;
+  }
+  .card_price_descr {
+    font-size: 18px;
+    padding: 0 0 3px 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .desc_title {
+    font-size: 24px;
+  }
+  .statistics_of_card,
+  .key_of_card {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .desc_title {
+    font-size: 20px;
+  }
+  .statistics_of_card {
+    width: 100%;
+    text-align: center;
+  }
+  .key_of_card {
+    display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  .card_item {
+    padding: 10px;
+  }
+  .card_price_bold {
+    font-size: 18px;
+  }
+  .card_price_descr {
+    font-size: 14px;
+    padding: 0 0 3px 0;
+  }
 }
