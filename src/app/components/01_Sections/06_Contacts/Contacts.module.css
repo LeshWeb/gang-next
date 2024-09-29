@@ -3,16 +3,63 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 24px;
-  background-image: url(./../../../public/contacts/contacts.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -200px;
   max-width: 100%;
-  height: 60vh;
+  height: 35vw;
   padding: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  width: 100%;
+  transform-origin: center;
+  top: 0px;
+  left: 0px;
 }
 
 .social_media {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .contacts_container {
+    max-width: 100%;
+    height: 25vw;
+    padding: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .contacts_container {
+    border-radius: 12px;
+    height: 30vw;
+    padding: 20px;
+  }
+  .social_media {
+    margin-top: 30px;
+  }
+  .social_media {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .contacts_container {
+    height: 35vw;
+  }
+  .social_media {
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .contacts_container {
+    height: 220px;
+  }
+  .image {
+    height: 100%;
+    width: auto;
+    left: -20px;
+  }
 }
