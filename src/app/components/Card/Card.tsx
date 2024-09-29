@@ -26,7 +26,6 @@ export function Card({ title, data, children, price, href }: ICard) {
         </div>
         <PrimaryBtn title="GO" size="small" href={href} />
       </div>
-      {/* <div className={styles.card_description}></div> */}
     </div>
   )
 }

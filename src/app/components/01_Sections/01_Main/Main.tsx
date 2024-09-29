@@ -35,6 +35,7 @@ export function Main() {
             modules={[Navigation]}
             navigation
             ref={swiperRef}
+            loop={true}
           >
             <SwiperSlide>
               <Image
@@ -90,7 +91,10 @@ export function Main() {
                 }
 
                 if (sidebar.current) {
-                  if (slide === 2) {
+                  if (slide === 1) {
+                    sidebar.current.style.top = '124px'
+                    setSlide(3)
+                  } else if (slide === 2) {
                     sidebar.current.style.top = '0px'
                     setSlide(1)
                   } else if (slide === 3) {
@@ -112,6 +116,9 @@ export function Main() {
                   } else if (slide === 2) {
                     sidebar.current.style.top = '124px'
                     setSlide(3)
+                  } else if (slide === 3) {
+                    sidebar.current.style.top = '0px'
+                    setSlide(1)
                   }
                 }
               }}

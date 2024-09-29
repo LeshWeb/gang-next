@@ -6,3 +6,9 @@ export interface ICommendCard {
   name: string
   date: string
 }
+
+export interface ICommendCardData {
+  text: string
+  name: string
+  date: string
+}

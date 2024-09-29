@@ -2,8 +2,7 @@
   display: grid;
   grid-template-columns: 4fr 1.5fr 4fr;
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 1vh;
-  grid-row-gap: 1vh;
+  gap: 15px;
   grid-template-areas:
     'a a b'
     'c f f'
@@ -12,49 +11,119 @@
 
 .grid_item {
   border-radius: 12px;
+  justify-self: stretch;
+  align-self: stretch;
 }
 
 .grid_item_1 {
   background: linear-gradient(180deg, #343d44 0%, #293035 100%);
   border: 2px solid #3f4950;
   grid-area: a;
-  height: 32vh;
+  height: 33vh;
 }
 .grid_item_2 {
-  background-color: black;
+  /* background-color: black; */
   grid-area: b;
-  height: 32vh;
+  height: 33vh;
 }
 .grid_item_3 {
-  background-color: blue;
+  /* background-color: blue; */
   grid-area: c;
-  height: 31vh;
+  height: 33vh;
 }
 .grid_item_4 {
-  background-color: green;
+  /* background-color: green; */
   grid-area: d;
-  height: 31vh;
+  height: 33vh;
 }
 .grid_item_5 {
-  background-color: yellow;
+  /* background-color: yellow; */
   grid-area: f;
-  height: calc(64vh + 4px);
+  height: calc(66vh + 15px);
 }
 
 .grid_text {
-  margin: 80px 71px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter);
   font-weight: 400;
   font-size: 24px;
   max-width: 720px;
   line-height: 155%;
   color: #fff;
+  margin: 60px;
 }
 
 .grid_image {
+  font-size: 24px;
   height: 100%;
   width: 100%;
   object-fit: cover;
   border: 2px solid #3f4950;
   border-radius: 12px;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    gap: 10px;
+  }
+  .grid_text {
+    font-size: 20px;
+    line-height: 145%;
+    margin: 30px;
+  }
+  .grid_item_1,
+  .grid_item_2,
+  .grid_item_3,
+  .grid_item_4 {
+    height: 22vh;
+  }
+  .grid_item_5 {
+    height: calc(44vh + 15px);
+  }
+}
+@media (max-width: 1000px) {
+  .grid_text {
+    font-size: 18px;
+    margin: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .grid_text {
+    font-size: 16px;
+  }
+  .grid_item_1,
+  .grid_item_2,
+  .grid_item_3,
+  .grid_item_4 {
+    height: 18vh;
+  }
+  .grid_item_5 {
+    height: calc(36vh + 10px);
+  }
+}
+@media (max-width: 900px) {
+  .grid_text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    grid-template-areas: 'a' 'b' 'c' 'd' 'f' 'f';
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    row-gap: 5px;
+    column-gap: 0px;
+  }
+  .grid_item_1,
+  .grid_item_2,
+  .grid_item_3,
+  .grid_item_4,
+  .grid_item_5 {
+    width: 95vw;
+    min-height: 15vh;
+  }
 }

@@ -8,7 +8,7 @@ import Girl from '@/app/public/devices_image/girl.jpg'
 
 export function Devices() {
   return (
-    <section className="devices">
+    <section className="section">
       <Title title="Наши девайсы" description="В комплекте с каждым пк" />
       <div className={styles.gallery}>
         <div className={`${styles.grid_item} ${styles.grid_item_1}`}>
