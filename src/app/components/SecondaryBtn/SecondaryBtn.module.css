@@ -14,9 +14,11 @@
   max-width: max-content;
 }
 
-.title:hover {
-  background-color: #1826e1;
-  color: #fff;
+@media (hover: hover) {
+  .title:hover {
+    background-color: #1826e1;
+    color: #fff;
+  }
 }
 
 .title:active {
