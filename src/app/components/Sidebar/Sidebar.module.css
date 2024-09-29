@@ -49,3 +49,8 @@
   width: 62px;
   height: 21px;
 }
+@media (max-width: 950px) {
+  .main_slidebar {
+    display: none;
+  }
+}

@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   border: 1px solid #3f4950;
   border-radius: 12px;
-  width: 387px;
-  height: 30vh;
+  width: 400px;
+  height: 280px;
   background: linear-gradient(180deg, #343d44 0%, #293035 100%);
   margin-bottom: 100px;
+  gap: 20px;
 }
 
 .feedback_text {
   margin: 0;
-  margin-bottom: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter);
   font-weight: 500;
   font-size: 18px;
   line-height: 155%;
@@ -24,26 +24,93 @@
 .feedback_usercard {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .feedback_image {
-  background-color: transparent;
-  border-radius: 100%;
   margin-right: 20px;
 }
 
 .feedback_name {
   margin-bottom: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter);
   font-weight: 400;
   font-size: 32px;
   color: #fff;
 }
 
 .feedback_date {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter);
   font-weight: 400;
   font-size: 18px;
-  color: #3f4950;
+  color: var(--description-text);
+}
+
+@media (max-width: 965px) {
+  .feedback_card {
+    padding: 20px;
+    width: 400px;
+    height: 180px;
+    margin-bottom: 60px;
+    gap: 20px;
+  }
+
+  .feedback_text {
+    font-size: 16px;
+    line-height: 145%;
+  }
+  .feedback_name {
+    font-size: 24px;
+  }
+
+  .feedback_date {
+    font-size: 14px;
+  }
+}
+@media (max-width: 950px) {
+  .feedback_card {
+    margin-inline: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .feedback_card {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  .feedback_card {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 380px) {
+  .feedback_card {
+    width: 270px;
+    height: 180px;
+    gap: 20px;
+  }
+  .feedback_text {
+    font-size: 14px;
+  }
+  .feedback_name {
+    font-size: 20px;
+  }
+  .feedback_date {
+    font-size: 14px;
+  }
+}
+@media (max-width: 330px) {
+  .feedback_card {
+    width: 240px;
+    height: 180px;
+    gap: 20px;
+  }
+  .feedback_text {
+    font-size: 14px;
+  }
+  .feedback_name {
+    font-size: 20px;
+  }
+  .feedback_date {
+    font-size: 14px;
+  }
 }

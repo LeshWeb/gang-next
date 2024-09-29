@@ -1,7 +1,6 @@
 .feedback_cards {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
+  max-width: 1410px;
+  margin-inline: auto;
 }
 
 .image {
@@ -12,4 +11,37 @@
 .feedback_cta {
   display: flex;
   justify-content: space-between;
+}
+
+.comment_swiper {
+  border: 1px solid red;
+}
+
+@media (max-width: 1481px) {
+  .feedback_cards {
+    max-width: 925px;
+  }
+}
+@media (max-width: 965px) {
+  .image {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (max-width: 950px) {
+  .feedback_cards {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 800px) {
+  .feedback_cta {
+    justify-content: center;
+  }
+}
+@media (max-width: 380px) {
+  .image {
+    height: 45px;
+    width: 45px;
+  }
 }
