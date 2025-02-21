@@ -3,90 +3,92 @@ import { Title } from '../../Title/Title'
 import { CommentCard } from '../../CommentCard/CommentCard'
 import styles from './Comments.module.css'
 import Image from 'next/image'
-import userOne from '@/app/public/users_comment/user_1.png'
-import userTwo from '@/app/public/users_comment/user_2.png'
-import userThree from '@/app/public/users_comment/user_3.png'
 import { ArrowButtonLeft } from '../../ArrowButtonLeft/ArrowButtonLeft'
 import { ArrowButtonRight } from '../../ArrowButtonRight/ArrowButtonRight'
 import { SecondaryBtn } from '../../SecondaryBtn/SecondaryBtn'
 import { Sidebar } from '../../Sidebar/Sidebar'
-import {
-  comment_one,
-  comment_two,
-  comment_three,
-} from '@/app/data/comment-data'
+import { comments } from '@/app/data/comment-data'
 
-import React from 'react'
+import React, { useRef, useState } from 'react'
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
 
 // import required modules
-import { Pagination } from 'swiper/modules'
+import { Navigation, Pagination } from 'swiper/modules'
+import { MAIN } from '@/app/config/main.page.config'
+import { swiperPrev } from '@/app/swiper/swiper.utils/slide.prev'
+import { swiperNext } from '@/app/swiper/swiper.utils/slide.next'
+import { slideHorNext, slideHorPrev } from './utills/slide.next'
 
-import './styles.css'
 
 export function Comments() {
+
+  const swiperRef = useRef<SwiperRef | null>(null)
+  const sidebar = useRef<HTMLDivElement | null>(null)
+  const [slide, setSlide] = useState<number>(1)
+
+
   return (
     <section className="section">
-      <Title title="Доволен сервисом?" description="ОСТАВЬ ОТЗЫВ" />
-      <div className={styles.feedback_cards}>
-        <Swiper
-          spaceBetween={40}
-          className={styles.comment_swiper}
-          modules={[Pagination]}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            951: {
-              slidesPerView: 2,
-            },
-            1480: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          <SwiperSlide>
-            <CommentCard {...comment_one}>
+      <Title title="Доволен сервисом?" description="ОСТАВЬ ОТЗЫВ" id={MAIN.REVIEWS} />
+      <Swiper
+        className={styles.comment_swiper}
+        modules={[Navigation]}
+        ref={swiperRef}
+        loop={true}
+        breakpoints={{
+          280: {
+            slidesPerView: 1,
+            spaceBetween: 60,
+            allowTouchMove: true
+          },
+          891: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            allowTouchMove: true
+          },
+          931: {
+            slidesPerView: 2,
+            spaceBetween: 80,
+            allowTouchMove: false
+          },
+          1341: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            allowTouchMove: false
+          },
+        }}
+      >
+        {comments.map((comment) => {
+          return <SwiperSlide key={comment.id}>
+            <CommentCard comment={comment} >
               <Image
-                src={userOne}
-                alt="People comment`s"
-                className={styles.image}
-              />
+                src={comment.userAvatar}
+                alt="People avatar"
+                className={styles.image} />
             </CommentCard>
           </SwiperSlide>
-          <SwiperSlide>
-            <CommentCard {...comment_two}>
-              <Image
-                src={userTwo}
-                alt="People comment`s"
-                className={styles.image}
-              />
-            </CommentCard>
-          </SwiperSlide>
-          <SwiperSlide>
-            <CommentCard {...comment_three}>
-              <Image
-                src={userThree}
-                alt="People comment`s"
-                className={styles.image}
-              />
-            </CommentCard>
-          </SwiperSlide>
-        </Swiper>
-      </div>
+        })}
+      </Swiper>
       <div className={styles.feedback_cta}>
-        <SecondaryBtn title="Оставить отзыв" href={'#'} />
-        <Sidebar scrollbar="horizontal" />
-        <div>
-          <ArrowButtonLeft />
-          <ArrowButtonRight />
+        <SecondaryBtn title="Оставить отзыв" />
+        <Sidebar sidebar={sidebar} slide={slide} />
+        <div className='flex gap-5'>
+          <ArrowButtonLeft onClick={() => {
+            swiperPrev({ swiperRef })
+            slideHorPrev({ sidebar, slide, setSlide })
+          }
+
+          } />
+          <ArrowButtonRight onClick={() => {
+            swiperNext({ swiperRef })
+            slideHorNext({ sidebar, slide, setSlide })
+          }} />
         </div>
       </div>
-    </section>
+    </section >
   )
 }

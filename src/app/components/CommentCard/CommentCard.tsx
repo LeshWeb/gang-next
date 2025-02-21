@@ -1,7 +1,14 @@
+import { ReactNode } from 'react'
 import styles from './CommentCard.module.css'
-import { ICommendCard } from './CommentCard.types'
+import { ICommendCardData } from './CommentCard.types'
 
-export function CommentCard({ text, children, name, date }: ICommendCard) {
+interface Props {
+  comment: ICommendCardData
+  children?: ReactNode
+}
+
+export function CommentCard({ comment, children }: Props) {
+  const { text, name, date } = comment
   return (
     <div className={styles.feedback_card}>
       <p className={styles.feedback_text}>{text}</p>
