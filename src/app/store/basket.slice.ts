@@ -1,7 +1,7 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit'
 import Cookies from 'js-cookie'
 
-interface BasketState {
+export interface BasketState {
   minimum: number
   medium: number
   maxiumum: number
@@ -10,7 +10,12 @@ interface BasketState {
 
 export type BasketPayload = 'minimum' | 'medium' | 'maxiumum'
 
-const initialState = { minimum: 0, medium: 0, maxiumum: 0, length: 0 }
+const initialState: BasketState = {
+  minimum: 0,
+  medium: 0,
+  maxiumum: 0,
+  length: 0,
+}
 
 const basketSlice = createSlice({
   name: 'basket',

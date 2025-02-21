@@ -17,7 +17,7 @@ import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
 // import required modules
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import { MAIN } from '@/app/config/main.page.config'
 import { swiperPrev } from '@/app/swiper/swiper.utils/slide.prev'
 import { swiperNext } from '@/app/swiper/swiper.utils/slide.next'

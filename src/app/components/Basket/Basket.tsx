@@ -5,7 +5,7 @@ import BasketLogo from '@/app/public/svgs/basket.svg'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import Cookies from 'js-cookie';
-import { setBasket } from '@/app/store/basket.slice';
+import { BasketState, setBasket } from '@/app/store/basket.slice';
 
 export function Basket() {
   const dispatch = useDispatch()
@@ -16,7 +16,7 @@ export function Basket() {
     }
   }, [dispatch]);
 
-  const BasketCount = useSelector((state: any) => state.length)
+  const BasketCount = useSelector((state: BasketState) => state.length)
   const isBasketEmpty = BasketCount !== 0
   return <div className='relative'>
     {isBasketEmpty && <div className={styles.count}>{BasketCount}</div>}
