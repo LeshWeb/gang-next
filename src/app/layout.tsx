@@ -3,10 +3,14 @@ import './globals.css'
 import 'normalize.css'
 import { Header } from './components/Header/Header'
 import { Footer } from '@/app/components/Footer/Footer'
+import { Providers } from './Providers'
 
 export const metadata: Metadata = {
-  title: 'NextGANG',
-  description: 'Portfolio Landing page',
+  icons: {
+    icon: '/public/svgs/icon.svg',
+  },
+  title: 'GANG',
+  description: 'Portfolio Landing page by Aleksey Cherkasov',
 }
 
 export default function RootLayout({
@@ -17,16 +21,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <link rel="icon" href="/public/svgs/icon.svg" sizes="any" />
-        <meta
-          name="viewport"
-          content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
-        />
-      </body>
-      <body>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

@@ -3,6 +3,7 @@ import { IFooterMenu, IFooterMenuLinks } from '@/app/data/footer-links'
 import styles from './FooterMenuItem.module.css'
 
 export function FooterMenuItem(data: IFooterMenu) {
+
   return (
     <div className={styles.footer_menu_items}>
       <h4 className={styles.menu_title}>{data.title}</h4>
@@ -10,7 +11,7 @@ export function FooterMenuItem(data: IFooterMenu) {
         {data.links.map((link: IFooterMenuLinks) => {
           return (
             <li className={styles.footer_list_item} key={link.id}>
-              <Link href={link.href}>
+              <Link href={link.href} target={link.target ? link.target : ''}>
                 <span className={styles.links}>{link.text}</span>
               </Link>
             </li>

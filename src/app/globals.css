@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 @font-face {
   font-family: 'Wadik';
   src: url('./public/fonts/Wadik.woff2') format('woff2');
@@ -19,7 +21,7 @@
 
 :root {
   --white: #fff;
-  --bg-color: #181c20;
+  --bg-color: #181b20;
   --second-primary-color: #373efc;
   --description-text: #b5c1c9;
   --font-wadik: 'Wadik', sans-serif;
@@ -42,7 +44,10 @@ a {
 
 .section {
   margin-bottom: 200px;
-  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 1200px) {

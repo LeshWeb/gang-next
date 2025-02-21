@@ -5,11 +5,12 @@ import Headphones from '@/app/public/devices_image/headphones.jpg'
 import Mouse from '@/app/public/devices_image/mouse.jpg'
 import Keyboard from '@/app/public/devices_image/keyboard.jpg'
 import Girl from '@/app/public/devices_image/girl.jpg'
+import { MAIN } from '@/app/config/main.page.config'
 
 export function Devices() {
   return (
     <section className="section">
-      <Title title="Наши девайсы" description="В комплекте с каждым пк" />
+      <Title title="Наши девайсы" description="В комплекте с каждым пк" id={MAIN.DEVICES} />
       <div className={styles.gallery}>
         <div className={`${styles.grid_item} ${styles.grid_item_1}`}>
           <p className={styles.grid_text}>
@@ -18,6 +19,9 @@ export function Devices() {
           </p>
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_2}`}>
+          <div className={styles.caption}>
+            <p className={styles.caption_text}>Наушники - Razer Barracuda X</p>
+          </div>
           <Image
             src={Headphones}
             alt="headphones"
@@ -25,6 +29,9 @@ export function Devices() {
           />
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_3}`}>
+          <div className={styles.caption}>
+            <p className={styles.caption_text}>Мышь - Razer DeathAdder V2</p>
+          </div>
           <Image
             src={Mouse}
             alt="mouse"
@@ -32,6 +39,9 @@ export function Devices() {
           />
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_4}`}>
+          <div className={styles.caption}>
+            <p className={styles.caption_text}>Клавиатура - Keychron V2 Max</p>
+          </div>
           <Image
             src={Keyboard}
             alt="keyboard"
@@ -39,6 +49,9 @@ export function Devices() {
           />
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_5}`}>
+          <div className={styles.caption}>
+            <p className={styles.caption_text}>Монитор - Razer Raptor 27</p>
+          </div>
           <Image
             src={Girl}
             alt="girl"
@@ -46,6 +59,6 @@ export function Devices() {
           />
         </div>
       </div>
-    </section>
+    </section >
   )
 }

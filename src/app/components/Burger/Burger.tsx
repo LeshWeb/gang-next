@@ -1,11 +1,28 @@
-import styles from './Burger.module.css'
+'use client'
+import { useState } from 'react';
 
-export function Burger() {
+export const BurgerMenu = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <div className={styles.burger}>
-      <div className={styles.burger_line1}></div>
-      <div className={styles.burger_line2}></div>
-      <div className={styles.burger_line3}></div>
-    </div>
-  )
-}
+    <button
+      className="hidden [@media(max-width:600px)]:flex flex-col justify-center items-center w-11 h-11 p-2 space-y-2 focus:outline-none"
+      onClick={toggleMenu}
+    >
+      <div
+        className={`w-9 h-[2px] bg-[#b5c1c9] transition-transform duration-300 rounded ${isOpen && 'rotate-45 translate-y-2.5 rounded'
+          }`}
+      ></div>
+      <div
+        className={`w-9 h-[2px] bg-[#b5c1c9] transition-opacity duration-300 rounded ${isOpen ? 'opacity-0' : 'opacity-100'
+          }`}
+      ></div>
+      <div
+        className={`w-9 h-[2px] bg-[#b5c1c9] transition-transform duration-300 rounded ${isOpen && '-rotate-45 -translate-y-2.5 rounded'
+          }`}
+      ></div>
+    </button>
+  );
+};

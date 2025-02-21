@@ -3,6 +3,7 @@
   stroke-width: 2px;
   width: 44px;
   height: 44px;
+  position: relative;
 }
 
 @media (hover: hover) {
@@ -13,4 +14,22 @@
 
 .basket:active {
   stroke: var(--second-primary-color);
+}
+
+.count {
+  display: flex;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  padding: 3px;
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  background-color: var(--second-primary-color);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .count {
+    font-size: 10px;
+  }
 }

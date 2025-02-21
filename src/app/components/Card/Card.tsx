@@ -1,10 +1,14 @@
+'use client'
+import { useDispatch } from 'react-redux'
 import { PrimaryBtn } from '../PrimaryBtn/PrimaryBtn'
 import styles from './Card.module.css'
 import { ICard } from './Card.types'
+import { incremented } from '@/app/store/basket.slice'
 
-export function Card({ title, data, children, price, href }: ICard) {
+export function Card({ title, data, children, href, price, type, id }: ICard) {
+  const dispath = useDispatch()
   return (
-    <div className={styles.card_item}>
+    <div className={styles.card_item} id={id}>
       <div className={styles.card_image}>{children}</div>
       <h3 className={styles.desc_title}>{title}</h3>
       <div className={styles.card_statistics}>
@@ -24,7 +28,7 @@ export function Card({ title, data, children, price, href }: ICard) {
           <p className={styles.card_price_bold}>{price}</p>
           <p className={styles.card_price_descr}>руб/сутки</p>
         </div>
-        <PrimaryBtn title="GO" size="small" href={href} />
+        <PrimaryBtn title="GO" size="small" onClick={() => { dispath(incremented(type)) }} href={href} />
       </div>
     </div>
   )

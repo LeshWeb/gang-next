@@ -20,6 +20,7 @@
 @media screen and (max-width: 960px) {
   .all_rights {
     width: 100%;
+    padding-top: 20px;
   }
 }
 @media screen and (max-width: 600px) {

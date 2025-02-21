@@ -21,6 +21,9 @@ import 'swiper/css/scrollbar'
 
 // import required modules
 import { Navigation } from 'swiper/modules'
+import { slidePrev, swiperPrev } from '@/app/swiper/swiper.utils/slide.prev'
+import { slideNext, swiperNext } from '@/app/swiper/swiper.utils/slide.next'
+import { ToggleSlide } from '../../ToggleSlide/ToggleSlide'
 
 export function Main() {
   const swiperRef = useRef<SwiperRef | null>(null)
@@ -39,25 +42,24 @@ export function Main() {
           >
             <SwiperSlide>
               <Image
-                className={swiper.swiper_image}
+                className='absolute inset-0 w-full h-full bg-[radial-gradient(circle,transparent_40%,[var(--bg-color)]_90%)] pointer-events-none'
                 src={FirstImage}
                 alt="Main first page image"
-                fill={true}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                className={swiper.swiper_image}
+                className='absolute inset-0 w-full h-full bg-[radial-gradient(circle,transparent_40%,var(--bg-color)_90%)] pointer-events-none'
                 src={SecondImage}
-                alt="Main first page image"
+                alt="Main second page image"
                 fill={true}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                className={swiper.swiper_image}
+                className='absolute inset-0 w-full h-full bg-[radial-gradient(circle,transparent_40%,var(--bg-color)_90%)] pointer-events-none'
                 src={ThreeImage}
-                alt="Main first page image"
+                alt="Main threed page image"
                 fill={true}
               />
             </SwiperSlide>
@@ -73,54 +75,21 @@ export function Main() {
             <br />и играй дома
           </h1>
         </div>
-        <PrimaryBtn title="Арендовать" size="big" href="#" />
-        <div className={styles.main_slidebar}>
-          <p className={styles.slidebar_start}>0{slide}</p>
-          <div className={styles.main_case}>
-            <div className={styles.main_loading} ref={sidebar}></div>
-          </div>
-          <p className={styles.slidebar_end}>03</p>
-        </div>
+        <PrimaryBtn title="Арендовать" size="big" />
+        <ToggleSlide slide={slide} sidebar={sidebar} toggleClassName='z-3' />
         <div className={styles.main_down}>
           <Under />
-          <div>
+          <div className='flex gap-5'>
             <ArrowButtonLeft
               onClick={() => {
-                if (swiperRef.current) {
-                  swiperRef.current.swiper.slidePrev()
-                }
-
-                if (sidebar.current) {
-                  if (slide === 1) {
-                    sidebar.current.style.top = '124px'
-                    setSlide(3)
-                  } else if (slide === 2) {
-                    sidebar.current.style.top = '0px'
-                    setSlide(1)
-                  } else if (slide === 3) {
-                    sidebar.current.style.top = '64px'
-                    setSlide(2)
-                  }
-                }
+                swiperPrev({ swiperRef })
+                slidePrev({ sidebar, slide, setSlide })
               }}
             />
             <ArrowButtonRight
               onClick={() => {
-                if (swiperRef.current) {
-                  swiperRef.current.swiper.slideNext()
-                }
-                if (sidebar.current) {
-                  if (slide === 1) {
-                    sidebar.current.style.top = '62px'
-                    setSlide(2)
-                  } else if (slide === 2) {
-                    sidebar.current.style.top = '124px'
-                    setSlide(3)
-                  } else if (slide === 3) {
-                    sidebar.current.style.top = '0px'
-                    setSlide(1)
-                  }
-                }
+                swiperNext({ swiperRef })
+                slideNext({ sidebar, slide, setSlide })
               }}
             />
           </div>

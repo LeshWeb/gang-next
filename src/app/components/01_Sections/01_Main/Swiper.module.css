@@ -5,11 +5,9 @@
   display: flex;
   width: 80vw;
   height: 90vh;
-  /* border: 1px solid orange; */
   right: 2vw;
 }
 .swiper {
-  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
 }

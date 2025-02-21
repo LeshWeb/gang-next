@@ -7,7 +7,7 @@
   height: 35vw;
   padding: 70px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .image {
