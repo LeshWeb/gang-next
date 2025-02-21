@@ -32,8 +32,8 @@ export function Comments() {
 
 
   return (
-    <section className="section">
-      <Title title="Доволен сервисом?" description="ОСТАВЬ ОТЗЫВ" id={MAIN.REVIEWS} />
+    <section className="section" id={MAIN.REVIEWS}>
+      <Title title="Доволен сервисом?" description="ОСТАВЬ ОТЗЫВ" />
       <Swiper
         className={styles.comment_swiper}
         modules={[Navigation]}

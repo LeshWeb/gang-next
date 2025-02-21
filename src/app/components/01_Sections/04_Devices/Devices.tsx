@@ -9,8 +9,8 @@ import { MAIN } from '@/app/config/main.page.config'
 
 export function Devices() {
   return (
-    <section className="section">
-      <Title title="Наши девайсы" description="В комплекте с каждым пк" id={MAIN.DEVICES} />
+    <section className="section" id={MAIN.DEVICES}>
+      <Title title="Наши девайсы" description="В комплекте с каждым пк" />
       <div className={styles.gallery}>
         <div className={`${styles.grid_item} ${styles.grid_item_1}`}>
           <p className={styles.grid_text}>

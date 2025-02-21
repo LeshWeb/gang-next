@@ -4,13 +4,12 @@ import styles from './Contacts.module.css'
 import Image from 'next/image'
 import ContactsImg from '@/app/public/contacts/contacts.png'
 import { MAIN } from '@/app/config/main.page.config'
-import { twMerge } from 'tailwind-merge'
 
 export function Contacts() {
   return (
-    <section className="section">
-      <div className={styles.contacts_container}>
-        <Title description={'Свяжись для заказа'} title={'Наши контакты'} id={MAIN.CONTACTS} />
+    <section className="section" id={MAIN.CONTACTS}>
+      <div className={styles.contacts_container} >
+        <Title description={'Свяжись для заказа'} title={'Наши контакты'} />
         <div className={styles.social_media}>
           <SocialMediaIcons size="big" />
         </div>

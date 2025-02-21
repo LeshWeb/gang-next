@@ -10,8 +10,8 @@ import { MAIN } from '@/app/config/main.page.config'
 
 export function Cards() {
   return (
-    <section className="section">
-      <Title description={'Cо своей сборкой'} title={'Выбирай и выигрывай'} id={MAIN.CHOOSE_PC} />
+    <section className="section" id={MAIN.CHOOSE_PC}>
+      <Title description={'Cо своей сборкой'} title={'Выбирай и выигрывай'} />
       <Card data={white} title="Стандартный" price={300} type='minimum' id={MAIN.STANDART}>
         <Image
           src={WhitePC}
