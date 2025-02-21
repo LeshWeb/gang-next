@@ -1,9 +1,10 @@
 import { LogoItem } from '../LogoItem/LogoItem'
 import Link from 'next/link'
 import styles from './Header.module.css'
-import { Basket } from '../Basket/Basket'
+const DynamicBasket = dynamic(() => import('../Basket/Basket').then((mod) => mod.Basket))
 import { MAIN } from '@/app/config/main.page.config'
 import { BurgerMenu } from '../Burger/Burger'
+import dynamic from 'next/dynamic'
 
 export function Header() {
   return (
@@ -35,7 +36,7 @@ export function Header() {
           </ul>
         </nav>
         <div className={styles.header_icons}>
-          <Basket />
+          <DynamicBasket />
           <BurgerMenu />
         </div>
       </div>

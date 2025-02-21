@@ -1,4 +1,5 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit'
+import Cookies from 'js-cookie'
 
 interface BasketState {
   minimum: number
@@ -9,19 +10,18 @@ interface BasketState {
 
 export type BasketPayload = 'minimum' | 'medium' | 'maxiumum'
 
+const initialState = { minimum: 0, medium: 0, maxiumum: 0, length: 0 }
+
 const basketSlice = createSlice({
   name: 'basket',
-  initialState: {
-    minimum: 0,
-    medium: 0,
-    maxiumum: 0,
-    length: 0,
-  },
+  initialState,
   reducers: {
     incremented: (state: BasketState, actions) => {
       const type: BasketPayload = actions.payload
       state[type] += 1
       state.length += 1
+
+      Cookies.set('basket', JSON.stringify(state), { expires: 7 })
     },
     decremented: (state: BasketState, actions) => {
       const type: BasketPayload = actions.payload
@@ -29,11 +29,31 @@ const basketSlice = createSlice({
       state[type] -= 1
       if (state.length === 0) return
       state.length -= 1
+
+      Cookies.set('basket', JSON.stringify(state), { expires: 7 })
+    },
+    resetBasket: (state: BasketState) => {
+      // Сбрасываем состояние корзины
+      state.minimum = 0
+      state.medium = 0
+      state.maxiumum = 0
+      state.length = 0
+
+      // Удаляем куку
+      Cookies.remove('basket')
+    },
+    setBasket: (state: BasketState, actions) => {
+      const { minimum, medium, maxiumum, length } = actions.payload
+      state.minimum = minimum
+      state.medium = medium
+      state.maxiumum = maxiumum
+      state.length = length
     },
   },
 })
 
-export const { incremented } = basketSlice.actions
+export const { incremented, decremented, resetBasket, setBasket } =
+  basketSlice.actions
 
 export const store = configureStore({
   reducer: basketSlice.reducer,
