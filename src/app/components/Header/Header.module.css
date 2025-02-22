@@ -10,6 +10,7 @@
   transition: 0.3s;
   padding-inline: 2vw;
   padding-block: 10px;
+  min-height: 66px;
 }
 .header_items {
   display: flex;

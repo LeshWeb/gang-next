@@ -1,0 +1,33 @@
+.navigation_container {
+  display: flex;
+  flex-direction: column;
+}
+.burger {
+  position: fixed;
+  background-color: #181b20;
+  height: 100vh;
+  width: 50vw;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  border-left: 2px #343d44 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: var(--description-text);
+  font-family: var(--font-inter);
+  font-size: 20px;
+  transition: ease-in;
+  font-weight: 500;
+}
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+  margin-bottom: 130px;
+}

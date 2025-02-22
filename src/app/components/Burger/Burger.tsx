@@ -1,8 +1,13 @@
 'use client'
 import { useState } from 'react';
 
-export const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+interface BurgerProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+export const BurgerMenu = ({ isOpen, setIsOpen }: BurgerProps) => {
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

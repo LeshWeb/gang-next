@@ -6,8 +6,14 @@ import { MAIN } from '@/app/config/main.page.config'
 import { BurgerMenu } from '../Burger/Burger'
 import dynamic from 'next/dynamic'
 
-export function Header() {
+interface HeaderProps {
+  isOpen: boolean
+  setIsOpen: (isOpen: boolean) => void
+}
+
+export function Header({ isOpen, setIsOpen }: HeaderProps) {
   return (
+
     <header className={styles.header}>
       <div className={styles.header_items}>
         <LogoItem />
@@ -37,7 +43,7 @@ export function Header() {
         </nav>
         <div className={styles.header_icons}>
           <DynamicBasket />
-          <BurgerMenu />
+          <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
     </header>
