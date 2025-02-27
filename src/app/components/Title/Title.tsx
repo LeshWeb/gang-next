@@ -1,8 +1,8 @@
 import styles from './Title.module.css'
 
 interface ITitleProp {
-  description: string
-  title: string
+  description?: string
+  title?: string
   id?: string
 }
 

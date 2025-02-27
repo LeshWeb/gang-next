@@ -58,6 +58,10 @@
 }
 
 .grid_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   font-size: 24px;
   height: 100%;
   width: 100%;

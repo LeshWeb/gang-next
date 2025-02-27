@@ -1,0 +1,28 @@
+.basket_items {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 80px;
+}
+
+.container {
+  margin-top: 120px;
+  max-width: 96vw;
+  margin-inline: 2vw;
+  /*   border: 1px solid red; */
+  width: 100%;
+  min-height: 60vh;
+  margin-bottom: 120px;
+}
+.link {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #686efc;
+  margin: 0;
+}
+
+.basket {
+  margin-bottom: 100px;
+}

@@ -1,28 +1,55 @@
 @import 'tailwindcss';
 
+@layer components {
+  .wadik {
+    font-family: var(--font-wadik);
+  }
+  .inter {
+    font-family: var(--font-inter);
+  }
+  .font-secondary {
+    color: var(--secondary);
+  }
+  .card {
+    background: linear-gradient(180deg, #343d44 0%, #293035 100%);
+    border: 3px solid #3f4950;
+  }
+}
+
+@theme {
+  --font-wadik: 'Wadik', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --color-secondary: var(--second-primary-color);
+  --color-active: var(--secondary);
+  --color-desc: var(--description-text);
+  --color-bg: var(--bg-color);
+  --color-h-border: #343d44;
+}
+
 @font-face {
   font-family: 'Wadik';
-  src: url('./public/fonts/Wadik.woff2') format('woff2');
+  src: url('../../public/fonts/Wadik.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Arial';
-  src: url('./public/fonts/Arial.woff2') format('woff2');
+  src: url('../../public/fonts/Arial.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('./public/fonts/Inter.woff2') format('woff2');
+  src: url('../../public/fonts/Inter.woff2') format('woff2');
 }
 
 :root {
-  --white: #fff;
+  --white: #ffffff;
   --bg-color: #181b20;
   --second-primary-color: #373efc;
+  --secondary: #6372fa;
   --description-text: #b5c1c9;
   --font-wadik: 'Wadik', sans-serif;
   --font-arial: 'Arial', sans-serif;

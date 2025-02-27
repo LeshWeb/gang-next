@@ -8,11 +8,13 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footer_up}>
         <LogoItem />
-        <SocialMediaIcons size="small" />
+        <SocialMediaIcons size='small' />
       </div>
       <div className={styles.footer_down}>
         <FooterMenuItems />
-        <p className={styles.all_rights}>© All Rights Reserved. Ivan Ivanov.</p>
+        <p className={styles.all_rights}>
+          © All Rights Reserved. Ivan Ivanov.
+        </p>
       </div>
     </footer>
   )

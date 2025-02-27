@@ -9,7 +9,9 @@ interface SidebarProps {
 
 export function Sidebar({ slide, sidebar }: SidebarProps) {
   return (
-    <div className={clsx(styles.main_slidebar, styles.main_slidebar_horizontal)}>
+    <div
+      className={clsx(styles.main_slidebar, styles.main_slidebar_horizontal)}
+    >
       <p className={styles.slidebar_start}>0{slide}</p>
       <div className={clsx(styles.main_case, styles.main_case_horizontal)}>
         <div

@@ -1,33 +1,19 @@
-'use client'
-import { useState } from 'react';
-
 interface BurgerProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  isOpen: boolean
+  setIsOpen: (isOpen: boolean) => void
 }
 
 export const BurgerMenu = ({ isOpen, setIsOpen }: BurgerProps) => {
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <button
-      className="hidden [@media(max-width:600px)]:flex flex-col justify-center items-center w-11 h-11 p-2 space-y-2 focus:outline-none"
-      onClick={toggleMenu}
-    >
-      <div
-        className={`w-9 h-[2px] bg-[#b5c1c9] transition-transform duration-300 rounded ${isOpen && 'rotate-45 translate-y-2.5 rounded'
-          }`}
-      ></div>
-      <div
-        className={`w-9 h-[2px] bg-[#b5c1c9] transition-opacity duration-300 rounded ${isOpen ? 'opacity-0' : 'opacity-100'
-          }`}
-      ></div>
-      <div
-        className={`w-9 h-[2px] bg-[#b5c1c9] transition-transform duration-300 rounded ${isOpen && '-rotate-45 -translate-y-2.5 rounded'
-          }`}
-      ></div>
+    <button className='hidden max-sm:flex h-11 w-11 flex-col items-center justify-center space-y-2 p-2 focus:outline-none' onClick={toggleMenu}>
+      <div className={`h-0.5 w-9 rounded bg-desc transition-transform ease-in ${isOpen && 'translate-y-2.5 rotate-45 rounded'}`}></div>
+      <div className={`h-0.5 w-9 rounded bg-desc transition-opacity ease-in ${isOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+      <div className={`h-0.5 w-9 rounded bg-desc transition-transform ease-in ${isOpen && '-translate-y-2.5 -rotate-45 rounded'}`}></div>
     </button>
-  );
-};
+  )
+}

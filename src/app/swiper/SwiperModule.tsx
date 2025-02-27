@@ -1,9 +1,9 @@
 'use client'
 import styles from './SwiperModule.module.css'
 import Image from 'next/image'
-import FirstImage from '@/app/public/main_image/main-fitst.png'
-import SecondImage from '@/app/public/main_image/main-second.png'
-import ThreeImage from '@/app/public/main_image/main-three.png'
+import FirstImage from '@/public/main_image/main-fitst.png'
+import SecondImage from '@/public/main_image/main-second.png'
+import ThreeImage from '@/public/main_image/main-three.png'
 import { ArrowButtonLeft } from '../components/ArrowButtonLeft/ArrowButtonLeft'
 import { ArrowButtonRight } from '../components/ArrowButtonRight/ArrowButtonRight'
 
@@ -34,27 +34,27 @@ export function SwiperModule() {
           <Image
             className={styles.bg_image}
             src={FirstImage}
-            alt="Main first page image"
-            width="1200"
-            height="844"
+            alt='Main first page image'
+            width='1200'
+            height='844'
           />
         </SwiperSlide>
         <SwiperSlide>
           <Image
             className={styles.bg_image}
             src={SecondImage}
-            alt="Main first page image"
-            width="1200"
-            height="844"
+            alt='Main first page image'
+            width='1200'
+            height='844'
           />
         </SwiperSlide>
         <SwiperSlide>
           <Image
             className={styles.bg_image}
             src={ThreeImage}
-            alt="Main first page image"
-            width="1200"
-            height="844"
+            alt='Main first page image'
+            width='1200'
+            height='844'
           />
         </SwiperSlide>
         <ArrowButtonLeft onClick={() => console.log('hello')} />

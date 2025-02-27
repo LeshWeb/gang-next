@@ -1,4 +1,6 @@
 class MainPage {
+  HOME = '/'
+  BASKET = '/basket/'
   CHOOSE_PC = 'choopse-pc'
   DEVICES = 'devices'
   REVIEWS = 'reviews'
@@ -9,11 +11,7 @@ class MainPage {
   EXCLUSIVE = 'exclusive'
 
   GET_ID(id: string) {
-    return `#${id}`
-  }
-
-  BASKET(path?: string) {
-    return `/basket/${path ? `/${path}` : ''}`
+    return `/#${id}`
   }
 }
 

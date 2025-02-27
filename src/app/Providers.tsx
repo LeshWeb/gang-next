@@ -8,16 +8,16 @@ import { Footer } from './components/Footer/Footer'
 import { BurgerSideBar } from './components/BurgerSideBar/BurgerSideBar'
 import { useState } from 'react'
 
-export function Providers({ children }: {
-    children: React.ReactNode,
-}) {
-    const [isOpen, setIsOpen] = useState<boolean>(true);
-    return (<Provider store={store}>
-        <LazyMotion features={domAnimation}>
-            <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-            {isOpen && <BurgerSideBar />}
-            {children}
-            < Footer />
-        </LazyMotion>
-    </Provider>)
+export function Providers({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  return (
+    <Provider store={store}>
+      <LazyMotion features={domAnimation}>
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+        {isOpen && <BurgerSideBar />}
+        {children}
+        <Footer />
+      </LazyMotion>
+    </Provider>
+  )
 }

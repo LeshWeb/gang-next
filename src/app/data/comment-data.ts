@@ -1,7 +1,7 @@
 import { ICommendCardData } from '@/app/components/CommentCard/CommentCard.types'
-import user_one from '@comments/user_1.png'
-import user_two from '@comments/user_2.png'
-import user_three from '@comments/user_3.png'
+import user_one from '../../../public/users_comment/user_1.png'
+import user_two from '../../../public/users_comment/user_2.png'
+import user_three from '../../../public/users_comment/user_3.png'
 
 export const comments: ICommendCardData[] = [
   {

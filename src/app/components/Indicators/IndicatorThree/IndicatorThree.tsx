@@ -1,6 +1,6 @@
 'use client'
-import Indicate from '@/app/public/svgs/indicaters/indicate3.svg'
-import Circle from '@/app/public/svgs/circle.svg'
+import Indicate from '../../../../..//public/svgs/indicaters/indicate3.svg'
+import Circle from '../../../../..//public/svgs/circle.svg'
 import indicators from './IndicatorThree.module.css'
 import styles from './../Indicators.module.css'
 import clsx from 'clsx'

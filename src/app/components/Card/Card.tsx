@@ -28,7 +28,14 @@ export function Card({ title, data, children, href, price, type, id }: ICard) {
           <p className={styles.card_price_bold}>{price}</p>
           <p className={styles.card_price_descr}>руб/сутки</p>
         </div>
-        <PrimaryBtn title="GO" size="small" onClick={() => { dispath(incremented(type)) }} href={href} />
+        <PrimaryBtn
+          title='GO'
+          size='small'
+          onClick={() => {
+            dispath(incremented(type))
+          }}
+          href={href}
+        />
       </div>
     </div>
   )

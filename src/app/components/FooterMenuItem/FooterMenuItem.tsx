@@ -3,7 +3,6 @@ import { IFooterMenu, IFooterMenuLinks } from '@/app/data/footer-links'
 import styles from './FooterMenuItem.module.css'
 
 export function FooterMenuItem(data: IFooterMenu) {
-
   return (
     <div className={styles.footer_menu_items}>
       <h4 className={styles.menu_title}>{data.title}</h4>

@@ -7,9 +7,6 @@ import { ArrowButtonLeft } from '../../ArrowButtonLeft/ArrowButtonLeft'
 import { Under } from '../../Under/Under'
 
 import Image from 'next/image'
-import FirstImage from '@/app/public/main_image/main-fitst.png'
-import SecondImage from '@/app/public/main_image/main-second.png'
-import ThreeImage from '@/app/public/main_image/main-three.png'
 
 import React, { useRef, useState } from 'react'
 // Import Swiper React components
@@ -30,7 +27,7 @@ export function Main() {
   const sidebar = useRef<HTMLDivElement | null>(null)
   const [slide, setSlide] = useState<number>(1)
   return (
-    <main className="section">
+    <main className='section'>
       <div className={styles.main}>
         <div className={swiper.swiper_view}>
           <Swiper
@@ -42,24 +39,25 @@ export function Main() {
           >
             <SwiperSlide>
               <Image
-                className='absolute inset-0 w-full h-full bg-[radial-gradient(circle,transparent_40%,[var(--bg-color)]_90%)] pointer-events-none'
-                src={FirstImage}
-                alt="Main first page image"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                className='absolute inset-0 w-full h-full bg-[radial-gradient(circle,transparent_40%,var(--bg-color)_90%)] pointer-events-none'
-                src={SecondImage}
-                alt="Main second page image"
+                className='pointer-events-none absolute inset-0 h-full w-full bg-[radial-gradient(circle,transparent_40%,[var(--bg-color)]_90%)]'
+                src='/main_image/main-first.png'
+                alt='Main first page image'
                 fill={true}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                className='absolute inset-0 w-full h-full bg-[radial-gradient(circle,transparent_40%,var(--bg-color)_90%)] pointer-events-none'
-                src={ThreeImage}
-                alt="Main threed page image"
+                className='pointer-events-none absolute inset-0 h-full w-full bg-[radial-gradient(circle,transparent_40%,var(--bg-color)_90%)]'
+                src='/main_image/main-second.png'
+                alt='Main second page image'
+                fill={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                className='pointer-events-none absolute inset-0 h-full w-full bg-[radial-gradient(circle,transparent_40%,var(--bg-color)_90%)]'
+                src='/main_image/main-three.png'
+                alt='Main threed page image'
                 fill={true}
               />
             </SwiperSlide>
@@ -75,11 +73,11 @@ export function Main() {
             <br />и играй дома
           </h1>
         </div>
-        <PrimaryBtn title="Арендовать" size="big" />
+        <PrimaryBtn title='Арендовать' size='big' />
         <ToggleSlide slide={slide} sidebar={sidebar} toggleClassName='z-3' />
         <div className={styles.main_down}>
           <Under />
-          <div className='flex gap-5'>
+          <div className='grid grid-cols-2 gap-10'>
             <ArrowButtonLeft
               onClick={() => {
                 swiperPrev({ swiperRef })

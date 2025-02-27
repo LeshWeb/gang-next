@@ -1,16 +1,12 @@
 import styles from './Devices.module.css'
 import Image from 'next/image'
 import { Title } from '../../Title/Title'
-import Headphones from '@/app/public/devices_image/headphones.jpg'
-import Mouse from '@/app/public/devices_image/mouse.jpg'
-import Keyboard from '@/app/public/devices_image/keyboard.jpg'
-import Girl from '@/app/public/devices_image/girl.jpg'
 import { MAIN } from '@/app/config/main.page.config'
 
 export function Devices() {
   return (
-    <section className="section" id={MAIN.DEVICES}>
-      <Title title="Наши девайсы" description="В комплекте с каждым пк" />
+    <section className='section' id={MAIN.DEVICES}>
+      <Title title='Наши девайсы' description='В комплекте с каждым пк' />
       <div className={styles.gallery}>
         <div className={`${styles.grid_item} ${styles.grid_item_1}`}>
           <p className={styles.grid_text}>
@@ -23,9 +19,10 @@ export function Devices() {
             <p className={styles.caption_text}>Наушники - Razer Barracuda X</p>
           </div>
           <Image
-            src={Headphones}
-            alt="headphones"
+            src='/devices_image/headphones.jpg'
+            alt='headphones'
             className={`${styles.grid_image} ${styles.grid_image_1}`}
+            fill={true}
           />
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_3}`}>
@@ -33,9 +30,10 @@ export function Devices() {
             <p className={styles.caption_text}>Мышь - Razer DeathAdder V2</p>
           </div>
           <Image
-            src={Mouse}
-            alt="mouse"
+            src='/devices_image/mouse.jpg'
+            alt='mouse'
             className={`${styles.grid_image} ${styles.grid_image_2}`}
+            fill={true}
           />
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_4}`}>
@@ -43,9 +41,10 @@ export function Devices() {
             <p className={styles.caption_text}>Клавиатура - Keychron V2 Max</p>
           </div>
           <Image
-            src={Keyboard}
-            alt="keyboard"
+            src='/devices_image/keyboard.jpg'
+            alt='keyboard'
             className={`${styles.grid_image} ${styles.grid_image_3}`}
+            fill={true}
           />
         </div>
         <div className={`${styles.grid_item} ${styles.grid_item_5}`}>
@@ -53,12 +52,13 @@ export function Devices() {
             <p className={styles.caption_text}>Монитор - Razer Raptor 27</p>
           </div>
           <Image
-            src={Girl}
-            alt="girl"
+            src='/devices_image/girl.jpg'
+            alt='girl'
             className={`${styles.grid_image} ${styles.grid_image_4}`}
+            fill={true}
           />
         </div>
       </div>
-    </section >
+    </section>
   )
 }
