@@ -1,48 +1,47 @@
-import DiscordIcon from '../../../../public/svgs/socialmedia/discord.svg'
-import TelegramIcon from '../../../../public/svgs/socialmedia/teltgram.svg'
-import TwichIcon from '../../../../public/svgs/socialmedia/twich.svg'
-import WhatsUpIcon from '../../../../public/svgs/socialmedia/whatsup.svg'
-import YouTubeIcon from '../../../../public/svgs/socialmedia/youtube.svg'
-import styles from './SocialMediaIcons.module.css'
-import { FooterProps } from './SocialMediaIcons.types'
-import clsx from 'clsx'
+import DiscordIcon from './icons/discord.svg'
+import TelegramIcon from './icons/telegram.svg'
+import TwichIcon from './icons/twich.svg'
+import WhatsUpIcon from './icons/whatsup.svg'
+import YouTubeIcon from './icons/youtube.svg'
+import cn from 'clsx'
+
+type FooterProps = {
+  size: 'big' | 'small'
+}
 
 export function SocialMediaIcons({ size }: FooterProps) {
+
   return (
-    <div
-      className={clsx(styles.social__media_footer, {
-        [styles.small_gap]: size === 'small',
-        [styles.big_gap]: size === 'big',
-      })}
-    >
-      <YouTubeIcon
-        className={clsx(styles.icon, {
-          [styles.small]: size === 'small',
-          [styles.big]: size === 'big',
-        })}
-      />
+    <div className={cn('flex text-active flex-nowrap', {
+      'gap-5 max-lg:gap-4': size === 'big',
+      'gap-1': size === 'small',
+    })}>
+      <YouTubeIcon className={cn('aspect-square active:text-white hover:text-secondary', {
+        'w-20 max-xl:w-15 max-lg:w-12 max-sm:w-10': size === 'big',
+        'w-6': size === 'small',
+      })} />
       <DiscordIcon
-        className={clsx(styles.icon, {
-          [styles.small]: size === 'small',
-          [styles.big]: size === 'big',
+        className={cn('aspect-square active:text-white hover:text-secondary', {
+          'w-20 max-xl:w-15 max-lg:w-12 max-sm:w-10': size === 'big',
+          'w-6': size === 'small',
         })}
       />
       <TwichIcon
-        className={clsx(styles.icon, {
-          [styles.small]: size === 'small',
-          [styles.big]: size === 'big',
+        className={cn('aspect-square active:text-white hover:text-secondary', {
+          'w-20 max-xl:w-15 max-lg:w-12 max-sm:w-10': size === 'big',
+          'w-6': size === 'small',
         })}
       />
       <TelegramIcon
-        className={clsx(styles.icon, {
-          [styles.small]: size === 'small',
-          [styles.big]: size === 'big',
+        className={cn('aspect-square active:text-white hover:text-secondary', {
+          'w-20 max-xl:w-15 max-lg:w-12 max-sm:w-10': size === 'big',
+          'w-6': size === 'small',
         })}
       />
       <WhatsUpIcon
-        className={clsx(styles.icon, {
-          [styles.small]: size === 'small',
-          [styles.big]: size === 'big',
+        className={cn('aspect-square active:text-white hover:text-secondary', {
+          'w-20 max-xl:w-15 max-lg:w-12 max-sm:w-10': size === 'big',
+          'w-6': size === 'small',
         })}
       />
     </div>

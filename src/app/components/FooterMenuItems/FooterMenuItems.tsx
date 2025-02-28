@@ -1,12 +1,10 @@
-import { arend, contacts, helps, IFooterMenu } from '@/app/data/footer-links'
+import { footerData } from '@/app/data/footer-links'
 import { FooterMenuItem } from './../FooterMenuItem/FooterMenuItem'
-import styles from './FooterMenuItems.module.css'
 
 export function FooterMenuItems() {
-  const menuItems: IFooterMenu[] = [contacts, arend, helps]
   return (
-    <div className={styles.navigation_items}>
-      {menuItems.map((item, index) => (
+    <div className='flex gap-x-12 max-sm:gap-x-6 max-md:flex-wrap'>
+      {footerData.map((item, index) => (
         <FooterMenuItem key={index} {...item} />
       ))}
     </div>

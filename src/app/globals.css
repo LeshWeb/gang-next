@@ -24,6 +24,8 @@
   --color-desc: var(--description-text);
   --color-bg: var(--bg-color);
   --color-h-border: #343d44;
+  --color-footer: #151718;
+  --color-footer-hover: #58656e;
 }
 
 @font-face {
