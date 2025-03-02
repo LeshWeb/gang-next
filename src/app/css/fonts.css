@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Wadik';
+  src: url('../../../public/fonts/Wadik.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../../public/fonts/Inter.woff2') format('woff2');
+}

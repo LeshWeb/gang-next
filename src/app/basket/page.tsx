@@ -1,14 +1,13 @@
 'use client'
-import styles from './basket.page.module.scss'
 import { BasketPCItem } from '../components/BasketPCItem/BasketPCItem'
 import { MAIN } from '../config/main.page.config'
 import Link from 'next/link'
-import { twMerge } from 'tailwind-merge'
 import { Title } from '../components/Title/Title'
 import { useSelector } from 'react-redux'
 import { BasketState } from '../store/basket.slice'
 import { usePrice } from './usePrice'
 import { PrimaryBtn } from '../components/PrimaryBtn/PrimaryBtn'
+import cn from 'clsx'
 
 
 export default function Page() {
@@ -17,12 +16,12 @@ export default function Page() {
     const exclusiveCount = useSelector((state: BasketState) => state.maxiumum)
     const price = usePrice()
 
-    return <section className={styles.container}>
-        <div className={styles.basket}>
-            <div className={styles.basket_items}>
-                <Link href={MAIN.GET_ID(MAIN.HOME)} className={twMerge(styles.link, 'opacity-50')}>Главная</Link>
-                <Link href={MAIN.GET_ID(MAIN.BASKET)} className={styles.link}>Корзина</Link>
-                <Link href={MAIN.GET_ID(MAIN.HOME)} className={twMerge(styles.link, 'opacity-50')}>Оформление заказа</Link>
+    return <section className={cn('section', 'max-w-[96vw] mx-auto w-full mt-24 border')}>
+        <div className='mb-20'>
+            <div className='flex gap-10 mb-10'>
+                <Link href={MAIN.GET_ID(MAIN.HOME)} className='font-inter text-active font-medium text-2xl uppercase'>Главная</Link>
+                <Link href={MAIN.GET_ID(MAIN.BASKET)} className='font-inter text-active font-medium text-2xl uppercase'>Корзина</Link>
+                <Link href={MAIN.GET_ID(MAIN.HOME)} className='font-inter text-active font-medium text-2xl uppercase'>Оформление заказа</Link>
             </div>
             {price ? <Title description={'Корзина'} /> : <Title description={'Ваша корзина пуста'} />}
             <div className='grid grid-cols-[3fr_1fr] gap-10'>
@@ -35,6 +34,5 @@ export default function Page() {
             </div>
         </div>
         <PrimaryBtn title={!!price ? 'Перейти к оформлению заказа' : 'Перейти к выбору компьютера'} size={'big'} />
-        <p className='bg-sexy'>Если у вас остались вопросы, пожалуйста, свяжитесь с нами</p>
     </section >
 }

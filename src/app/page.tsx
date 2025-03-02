@@ -1,4 +1,3 @@
-import styles from './page.module.css'
 import { Main } from '@/app/components/01_Sections/01_Main/Main'
 import { Stages } from './components/01_Sections/02_Stages/Stages'
 import { Cards } from './components/01_Sections/03_Cards/Cards'
@@ -8,7 +7,7 @@ import { Contacts } from './components/01_Sections/06_Contacts/Contacts'
 
 export default function Page() {
   return (
-    <div className={styles.container}>
+    <div className='max-w-[96vw] mx-auto overflow-x-hidden'>
       <Main />
       <Stages />
       <Cards />

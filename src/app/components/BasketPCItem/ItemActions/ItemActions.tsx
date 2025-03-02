@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { ArrowButtonLeft } from '../../ArrowButtonLeft/ArrowButtonLeft'
 import { ArrowButtonRight } from '../../ArrowButtonRight/ArrowButtonRight'
-import { decremented, incremented, resetBasket } from '@/app/store/basket.slice'
+import { decremented, incremented } from '@/app/store/basket.slice'
 
 interface IItemActions {
   count: number
@@ -17,7 +17,7 @@ export function ItemActions({ count, type }: IItemActions) {
           dispath(decremented(type))
         }}
       />
-      <p className='wadik text-3xl text-[#686efc]'>{count}</p>
+      <p className='wadik text-3xl text-[#686efc] font-wadik'>{count}</p>
       <ArrowButtonRight
         isSmall
         onClick={() => {
