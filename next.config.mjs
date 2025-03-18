@@ -27,6 +27,8 @@ const nextConfig = {
     return config
   },
 
+  basePath: '',
+
   // ...other config
 }
 

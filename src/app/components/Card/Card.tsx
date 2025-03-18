@@ -4,6 +4,7 @@ import { PrimaryBtn } from '../PrimaryBtn/PrimaryBtn'
 import styles from './Card.module.css'
 import { ICard } from './Card.types'
 import { incremented } from '@/app/store/basket.slice'
+import toast from 'react-hot-toast'
 
 export function Card({ title, data, children, href, price, type, id }: ICard) {
   const dispath = useDispatch()
@@ -33,6 +34,14 @@ export function Card({ title, data, children, href, price, type, id }: ICard) {
           size='small'
           onClick={() => {
             dispath(incremented(type))
+            toast.dismiss()
+            toast.success('Товар добавлен в корзину', {
+              iconTheme: {
+                primary: '#686efc',
+                secondary: '#fff',
+              },
+
+            })
           }}
           href={href}
         />

@@ -1,6 +1,7 @@
 class MainPage {
   HOME = '/'
-  BASKET = '/basket/'
+  BASKET = '/basket'
+  ORDER = '/order'
   CHOOSE_PC = 'choopse-pc'
   DEVICES = 'devices'
   REVIEWS = 'reviews'

@@ -3,4 +3,5 @@ export interface PrimaryBtnProps {
   size: 'big' | 'small'
   onClick?: () => void
   href?: string
+  myStyle?: string
 }

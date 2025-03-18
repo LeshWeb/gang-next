@@ -38,13 +38,11 @@ const basketSlice = createSlice({
       Cookies.set('basket', JSON.stringify(state), { expires: 7 })
     },
     resetBasket: (state: BasketState) => {
-      // Сбрасываем состояние корзины
       state.minimum = 0
       state.medium = 0
       state.maxiumum = 0
       state.length = 0
 
-      // Удаляем куку
       Cookies.remove('basket')
     },
     setBasket: (state: BasketState, actions) => {

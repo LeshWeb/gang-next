@@ -4,7 +4,7 @@ import { Providers } from './Providers'
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/svgs/icon.svg',
+    icon: 'svgs/icon.svg',
   },
   title: 'GANG',
   description: 'Portfolio Landing page by Aleksey Cherkasov',

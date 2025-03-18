@@ -2,7 +2,6 @@ import { SocialMediaIcons } from '../../SocialMediaIcons/SocialMediaIcons'
 import { Title } from '../../Title/Title'
 import styles from './Contacts.module.css'
 import Image from 'next/image'
-import ContactsImg from '@/public'
 import { MAIN } from '@/app/config/main.page.config'
 
 export function Contacts() {

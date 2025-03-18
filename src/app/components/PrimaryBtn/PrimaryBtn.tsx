@@ -4,7 +4,7 @@ import { PrimaryBtnProps } from './PrimaryBtn.types'
 import clsx from 'clsx'
 import { MAIN } from '@/app/config/main.page.config'
 
-export function PrimaryBtn({ title, size, onClick, href }: PrimaryBtnProps) {
+export function PrimaryBtn({ title, size, onClick, href, myStyle }: PrimaryBtnProps) {
   return (
     <Link href={href ? href : MAIN.GET_ID(MAIN.CHOOSE_PC)}>
       <div
@@ -14,7 +14,7 @@ export function PrimaryBtn({ title, size, onClick, href }: PrimaryBtnProps) {
         })}
         onClick={onClick}
       >
-        {title}
+        <p className={myStyle}>{title}</p>
       </div>
     </Link>
   )

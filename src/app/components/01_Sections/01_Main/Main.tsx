@@ -77,7 +77,7 @@ export function Main() {
         <ToggleSlide slide={slide} sidebar={sidebar} toggleClassName='z-3' />
         <div className={styles.main_down}>
           <Under />
-          <div className='grid grid-cols-2 gap-10'>
+          <div className='flex gap-10'>
             <ArrowButtonLeft
               onClick={() => {
                 swiperPrev({ swiperRef })

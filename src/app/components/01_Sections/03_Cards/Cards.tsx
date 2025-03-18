@@ -15,6 +15,7 @@ export function Cards() {
         price={300}
         type='minimum'
         id={MAIN.STANDART}
+        href='javascript:void(0)'
       >
         <Image
           src='/PC/whitePC.png'
@@ -22,6 +23,7 @@ export function Cards() {
           className={styles.shadow}
           width={330}
           height={340}
+
         />
       </Card>
       <Card
@@ -30,6 +32,7 @@ export function Cards() {
         price={400}
         type='medium'
         id={MAIN.ADVANCED}
+        href='javascript:void(0)'
       >
         <Image
           src='/PC/blackPC.png'
@@ -45,6 +48,7 @@ export function Cards() {
         price={500}
         type='maxiumum'
         id={MAIN.EXCLUSIVE}
+        href='javascript:void(0)'
       >
         <Image
           src='/PC/greenPC.png'

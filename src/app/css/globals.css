@@ -4,6 +4,7 @@
 :root {
   --white: #ffffff;
   --bg-color: #181b20;
+  --primary-color: #1826e1;
   --second-primary-color: #373efc;
   --secondary: #6372fa;
   --description-text: #b5c1c9;
@@ -22,6 +23,8 @@
   --color-h-border: #343d44;
   --color-footer: #151718;
   --color-footer-hover: #58656e;
+  --color-primary: var(--primary-color);
+  --breakpoint-mob: 30rem;
 }
 
 @layer components {

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { BasketState } from '../store/basket.slice'
+import { BasketState } from '../../store/basket.slice'
 
 export function usePrice(): number {
   const standartCount = useSelector((state: BasketState) => state.minimum)
