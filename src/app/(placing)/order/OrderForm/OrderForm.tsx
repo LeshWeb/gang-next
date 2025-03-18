@@ -24,13 +24,18 @@ export function OrderForm() {
 
     const onSubmit: SubmitHandler<IForm> = (data) => {
         const basket: basketCookies = JSON.parse(Cookies.get('basket') || '{}')
-        sendMessage(data, basket)
+
+        const text = `Имя: ${data.name}\nТелефон: ${data.phone}\nМинимальный - ${basket.minimum}\nПродвинутый - ${basket.medium}\nЭксклюзивный - ${basket.maxiumum}`
+
+        sendMessage(text)
             .then(() => {
                 reset({
                     phone: '',
                     name: ''
                 });
-                toast.success('Сообщение отправлено');
+                toast.success(text, {
+                    duration: 5000
+                })
                 pathname.push('/')
                 dispatch(resetBasket())
             })
